@@ -16,7 +16,7 @@ This project has two big parts:
    - **Manual mode**: Take a single news URL, scrape it, classify, and store the result.  
    - **Auto mode**: Poll RSS feeds on a schedule, classify all new articles, and store everything in MongoDB.
 
-The final system becomes a foundation for a real-time **news topic intelligence** engine, with optional future upgrade to long-context models (e.g., Longformer).
+The final system becomes a foundation for a real-time **news topic intelligence** engine, with optional future upgrade to long-context models (e.g., Longformer) or extend classifier with open-label or unsupervised discovery.
 
 ---
 
@@ -281,6 +281,22 @@ For this step I will:
 - [ ] Run module manually  
 - [ ] Confirm new documents appear in Mongo  
 - [ ] Re-run → duplicates skipped
+
+---
+
+## Optional Future Upgrade
+
+Extend classifier with open-label or unsupervised discovery using to lable on novel catagories
+
+- Zero-Shot Classification – Predict user-defined labels without retraining using facebook/bart-large-mnli
+
+- Embedding + Clustering – Group unlabeled articles by similarity using BERT embeddings + KMeans or UMAP
+
+- Use as fallback when main classifier confidence is low or new topics emerge
+
+- Store results alongside predicted topics in MongoDB for hybrid analysis
+
+- Look into pipeline("zero-shot-classification") and AutoModel.from_pretrained(...) for implementation.
 
 ---
 
