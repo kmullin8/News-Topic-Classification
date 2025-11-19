@@ -3,3 +3,6 @@
 
 11/18
   - 4:00 - 4:45, maping project structure, planning optional additions and requirments
+
+11/19
+  - 9:30
