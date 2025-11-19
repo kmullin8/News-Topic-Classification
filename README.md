@@ -78,6 +78,20 @@ sequenceDiagram
     MongoDB-->>PipelineManager: Confirm insert
 ```
 
+## Mongodb schema
+
+```
+{
+  "_id": "ObjectId",
+  "url": "string",
+  "title": "string",
+  "text": "string",
+  "topics": ["string"],
+  "topic_scores": ["float"],
+  "main_topic": "string",
+  "published_at": "datetime"
+}
+```
 
 ## Project structure
 
@@ -280,9 +294,9 @@ For this step I will:
 
 - [ ] Build `src/db/mongo_client.py` for DB connection
 - [ ] Use schema:
-  - `_id`, `source`, `url`, `title`, `text`,  
+  - `_id`, `url`, `title`, `text`,  
     `topics`, `topic_scores`, `main_topic`,  
-    `published_at`, `ingested_at`
+    `published_at`
 - [ ] Add indexes:
   - unique index on `url`
   - index on `published_at`
