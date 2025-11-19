@@ -1,0 +1,10 @@
+# Global configuration file
+paths:
+  data_dir: "data" #raw datasets, processed datasets, and scraped articles are stored here
+  model_dir: "models/bert_20ng" #fine-tuned models are stored here
+
+rss_sources: # RSS feed URLs for news articles
+  - "http://rss.cnn.com/rss/cnn_topstories.rss"
+
+scraping: # Web scraping settings
+  user_agent: "NewsTopicClassifierBot/0.1" 
