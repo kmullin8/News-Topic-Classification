@@ -99,10 +99,10 @@ News-Topic-Classification/
 │   ├── data/                   # Dataset loaders, tokenizers, preprocessing utilities
 │   │   └── loader.py           # Loads 20NG, RCV1-v2, and scraped text into HF Datasets
 │   │
-│   ├── scraping/                 # Web scraping + RSS ingestion pipeline
-│   │   ├── rss_poll.py           # Polls RSS feeds and extracts article links
-│   │   ├── scrape_url.py         # Scrapes a single URL → article text + metadata
-│   │   └── clean_text.py         # Cleaning, normalization, and text sanitization
+│   ├── scraping/               # Web scraping + RSS ingestion pipeline
+│   │   ├── rss_poll.py         # Polls RSS feeds and extracts article links
+│   │   ├── scrape_url.py       # Scrapes a single URL → article text + metadata
+│   │   └── clean_text.py       # Cleaning, normalization, and text sanitization
 │   │
 │   ├── training/               # Training pipelines and training utilities
 │   │   └── train_20ng.py       # DistilBERT fine-tuning on 20 Newsgroups
@@ -118,8 +118,8 @@ News-Topic-Classification/
 ├── notebooks/                  # Jupyter notebooks for experiments and exploration
 └── scripts/                    # Optional setup or utility scripts (e.g., RSS testing)
     ├── ingest_rss.sh           # Shell script to poll RSS feeds and save articles
-    ├── run_train_20ng.sh           # Runs DistilBERT training on the 20 Newsgroups dataset
-    └── run_train_rcv1.sh           # Runs continued fine-tuning on the Reuters RCV1-v2 dataset
+    ├── run_train_20ng.sh       # Runs DistilBERT training on the 20 Newsgroups dataset
+    └── run_train_rcv1.sh       # Runs continued fine-tuning on the Reuters RCV1-v2 dataset
 ```
 
 ## Technologies
