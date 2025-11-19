@@ -5,4 +5,4 @@
   - 4:00 - 4:45, maping project structure, planning optional additions and requirments
 
 11/19
-  - 9:30
+  - 9:30 - 12:30, Completed full project setup by configuring config.yaml, stable dependencies, resolving transformer/tokenizer and lxml issues, validating RSS feeds, implementing .env loading, and finishing the working sanity_check.py environment test.
