@@ -78,6 +78,50 @@ sequenceDiagram
     MongoDB-->>PipelineManager: Confirm insert
 ```
 
+
+## Project structure
+
+```
+News-Topic-Classification/
+├── config.yaml                 # Global configuration (paths, RSS feeds, scraper settings)
+├── requirements.txt            # Pinned runtime dependencies for reproducible installs
+├── .env                        # Environment variables (MongoDB URI, DB name)
+│
+├── data/                       # Raw datasets, processed datasets, and scraped articles
+│   ├── raw/                    # Downloaded datasets (20NG, RCV1-v2, etc.)
+│   └── scraped/                # Raw scraped articles (HTML, extracted text)
+│   └── processed/              # Tokenized / cleaned datasets ready for training
+│
+├── models/                     # Saved model checkpoints
+│   └── bert_20ng/              # Fine-tuned DistilBERT weights + tokenizer files
+│
+├── src/                        # All project source code (modular architecture)
+│   ├── data/                   # Dataset loaders, tokenizers, preprocessing utilities
+│   │   └── loader.py           # Loads 20NG, RCV1-v2, and scraped text into HF Datasets
+│   │
+│   ├── scraping/                 # Web scraping + RSS ingestion pipeline
+│   │   ├── rss_poll.py           # Polls RSS feeds and extracts article links
+│   │   ├── scrape_url.py         # Scrapes a single URL → article text + metadata
+│   │   └── clean_text.py         # Cleaning, normalization, and text sanitization
+│   │
+│   ├── training/               # Training pipelines and training utilities
+│   │   └── train_20ng.py       # DistilBERT fine-tuning on 20 Newsgroups
+│   │
+│   ├── inference/              # Article classification pipeline
+│   │   └── inference.py        # Loads trained model → classifies new articles
+│   │
+│   ├── utils/                  # Shared helpers (config loading, logging, etc.)
+│   │   └── config_loader.py    # Loads config.yaml + merges .env secrets
+│   │
+│   └── sanity_check.py         # Verifies that all required imports are available
+│
+├── notebooks/                  # Jupyter notebooks for experiments and exploration
+└── scripts/                    # Optional setup or utility scripts (e.g., RSS testing)
+    ├── ingest_rss.sh           # Shell script to poll RSS feeds and save articles
+    ├── run_train_20ng.sh           # Runs DistilBERT training on the 20 Newsgroups dataset
+    └── run_train_rcv1.sh           # Runs continued fine-tuning on the Reuters RCV1-v2 dataset
+```
+
 ## Technologies
 
 - **Python**
