@@ -1,16 +1,26 @@
-#handles loading configuration from yaml and environment variables
-
 import yaml
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv() # take environment variables from .env.
+load_dotenv()  # Load environment variables from .env
 
-def load_config():
-    with open("config.yaml", "r") as f: #load configuration from yaml file convets to dictionary
+
+def load_config(path: str = "config.yaml"):
+    """
+    Loads YAML config and merges environment variables.
+    """
+
+    config_path = Path(path)
+    if not config_path.exists():
+        raise FileNotFoundError(f"Config file not found at: {config_path}")
+
+    # Load YAML
+    with open(config_path, "r") as f:
         cfg = yaml.safe_load(f)
 
-    cfg["mongo_uri"] = os.getenv("MONGO_URI") #load MongoDB URI from environment variable
-    cfg["mongo_db"] = os.getenv("MONGO_DB") #load MongoDB database name from environment variable
+    # Merge environment variables (MongoDB, API keys, etc.)
+    cfg["mongo_uri"] = os.getenv("MONGO_URI")
+    cfg["mongo_db"] = os.getenv("MONGO_DB")
 
     return cfg
