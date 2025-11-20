@@ -4,7 +4,7 @@ transformers==4.39.1         # HuggingFace Transformers library
 tokenizers==0.15.2           # Matching tokenizers version for Transformers
 datasets==2.19.0             # HuggingFace Datasets loader (20NG, RCV1, etc.)
 scikit-learn==1.4.0          # Metrics, preprocessing, classic ML utilities
-accelerate>=0.21.0           # Required by HuggingFace Trainer for device setup
+accelerate>=0.28.0           # Required by HuggingFace Trainer for device setup
 
 # --- Scraping + Parsing ------------------------------------------------------
 newspaper3k==0.2.8           # Article extraction (HTML → clean text)
