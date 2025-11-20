@@ -1,10 +1,10 @@
 # --- Core ML stack -----------------------------------------------------------
 torch==2.2.0                 # PyTorch backend for training and inference
-transformers==4.39.1         # HuggingFace Transformers library
-tokenizers==0.15.2           # Matching tokenizers version for Transformers
+transformers==4.36.2         # Stable HF version compatible with Accelerate
+tokenizers==0.15.2           # Matching tokenizers version
 datasets==2.19.0             # HuggingFace Datasets loader (20NG, RCV1, etc.)
 scikit-learn==1.4.0          # Metrics, preprocessing, classic ML utilities
-accelerate>=0.28.0           # Required by HuggingFace Trainer for device setup
+accelerate==0.25.0           # Stable version for HF Trainer on Windows
 
 # --- Scraping + Parsing ------------------------------------------------------
 newspaper3k==0.2.8           # Article extraction (HTML → clean text)
