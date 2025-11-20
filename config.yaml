@@ -1,10 +1,18 @@
 # Global configuration file
-paths:
-  data_dir: "data" #raw datasets, processed datasets, and scraped articles are stored here
-  model_dir: "models/bert_20ng" #fine-tuned models are stored here
 
-rss_sources: # RSS feed URLs for news articles
+paths:
+  data_dir: "data"
+  distilbert_20ng_dir: "models/bert_20ng"  # where the 20NG model will be saved
+
+rss_sources:
   - "http://rss.cnn.com/rss/cnn_topstories.rss"
 
-scraping: # Web scraping settings
-  user_agent: "NewsTopicClassifierBot/0.1" 
+scraping:
+  user_agent: "NewsTopicClassifierBot/0.1"
+
+training: #hyperparameters for fine-tuning
+  twenty_ng:
+    max_length: 512
+    batch_size: 16
+    learning_rate: 5e-5
+    num_epochs: 3
