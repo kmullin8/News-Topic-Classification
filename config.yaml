@@ -1,18 +1,22 @@
 # Global configuration file
 
+# Root-level project filepaths
 paths:
-  data_dir: "data"
-  distilbert_20ng_dir: "models/bert_20ng"  # where the 20NG model will be saved
+  data_dir: "data"                        # where raw and processed data will be stored
+  distilbert_20ng_dir: "models/bert_20ng" # where the 20NG model will be saved
 
+# RSS feeds used by the live scraper
 rss_sources:
   - "http://rss.cnn.com/rss/cnn_topstories.rss"
 
+# Scraper configuration
 scraping:
   user_agent: "NewsTopicClassifierBot/0.1"
 
-training: #hyperparameters for fine-tuning
+#hyperparameters for fine-tuning
+training:
   twenty_ng:
     max_length: 512
     batch_size: 16
-    learning_rate: 5e-5
+    learning_rate: 0.00005
     num_epochs: 3
