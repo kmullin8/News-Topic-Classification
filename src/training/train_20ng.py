@@ -1,7 +1,12 @@
+#Train DistilBERT on the 20 Newsgroups dataset
+
 import os
 from pathlib import Path
 
+# HuggingFace Dataset container
 from datasets import DatasetDict
+
+# HuggingFace Transformers: tokenizer, model, training, padding
 from transformers import (
     AutoTokenizer,
     AutoModelForSequenceClassification,
@@ -21,18 +26,21 @@ def build_tokenizer():
 
 def tokenize_function(batch, tokenizer, max_length: int = 512):
     """
-    Tokenize a batch. No padding here — it will be handled dynamically by the data collator.
+    Tokenize a batch of texts using the provided tokenizer.
     """
     return tokenizer(
         batch["text"],
-        truncation=True,
+        truncation=True,        # Prevent overflowing max_length
         max_length=max_length,
     )
 
 
 def compute_metrics(eval_pred):
-    logits, labels = eval_pred
-    preds = logits.argmax(axis=-1)
+    """
+    Compute accuracy and macro F1 score for evaluation.
+    """
+    logits, labels = eval_pred      
+    preds = logits.argmax(axis=-1) 
 
     return {
         "accuracy": accuracy_score(labels, preds),
@@ -43,25 +51,24 @@ def compute_metrics(eval_pred):
 def main():
     config = load_config()
 
-    # ---- Paths ----
+    #Paths
     model_dir = Path(config["paths"].get("distilbert_20ng_dir", "models/bert_20ng"))
     model_dir.mkdir(parents=True, exist_ok=True)
 
-    # ---- Hyperparameters ----
-    hparams = config["training"]["twenty_ng"]
-    max_length = hparams.get("max_length", 512)
-    batch_size = hparams.get("batch_size", 16)
-    learning_rate = hparams.get("learning_rate", 5e-5)
-    num_epochs = hparams.get("num_epochs", 3)
+    #Hyperparameters
+    max_length = int(config["training"]["twenty_ng"].get("max_length", 512))
+    batch_size = int(config["training"]["twenty_ng"].get("batch_size", 16))
+    learning_rate = float(config["training"]["twenty_ng"].get("learning_rate", 5e-5))
+    num_epochs = float(config["training"]["twenty_ng"].get("num_epochs", 3))
 
-    # 1) Load dataset
+    #Load dataset
     ds_info = load_20ng_dataset()
     dataset: DatasetDict = ds_info.dataset
     label2id = ds_info.label2id
     id2label = ds_info.id2label
     num_labels = len(label2id)
 
-    # 2) Tokenizer
+    #Tokenizer
     tokenizer = build_tokenizer()
 
     def tokenize_batch(batch):
@@ -76,56 +83,58 @@ def main():
     #Dynamic padding
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
 
-    # 3) Model
+    #Load model
     model = AutoModelForSequenceClassification.from_pretrained(
         "distilbert-base-uncased",
-        num_labels=num_labels,
-        id2label=id2label,
-        label2id=label2id,
+        num_labels=num_labels,  # Set number of output labels
+        id2label=id2label,      # Map IDs to labels
+        label2id=label2id,      # Map labels to IDs
     )
 
-    # 4) Training arguments
+    #Training arguments
     training_args = TrainingArguments(
         output_dir=str(model_dir / "hf_checkpoints"),
-        evaluation_strategy="epoch",
-        save_strategy="epoch",
-        load_best_model_at_end=True,
+        evaluation_strategy="epoch",    # Evaluate at end of each epoch
+        save_strategy="epoch",          # Save model at end of each epoch
+        load_best_model_at_end=True,    # Load best model when finished training
         metric_for_best_model="accuracy",
         greater_is_better=True,
 
+        #training hyperparameters
         per_device_train_batch_size=batch_size,
         per_device_eval_batch_size=batch_size * 2,
         learning_rate=learning_rate,
         num_train_epochs=num_epochs,
         weight_decay=0.01,
 
+        # logging
         logging_steps=50,
         report_to="none",
     )
 
-    # 5) Trainer
+    #Trainer
     trainer = Trainer(
         model=model,
         args=training_args,
         train_dataset=tokenized_datasets["train"],
         eval_dataset=tokenized_datasets["test"],
         tokenizer=tokenizer,
-        data_collator=data_collator,  
+        data_collator=data_collator,    # Dynamic padding
         compute_metrics=compute_metrics,
     )
 
-    # 6) Train
+    # Train model
     trainer.train()
 
-    # 7) Evaluate
+    # Evaluate
     eval_results = trainer.evaluate()
     print("\nFinal evaluation:", eval_results)
 
-    # 8) Save model + tokenizer
+    # Save model + tokenizer
     model.save_pretrained(model_dir)
     tokenizer.save_pretrained(model_dir)
 
-    # Optional detailed classification report
+    # detailed classification report
     preds_output = trainer.predict(tokenized_datasets["test"])
     preds = preds_output.predictions.argmax(-1)
     labels = tokenized_datasets["test"]["label"]
@@ -136,6 +145,6 @@ def main():
         target_names=[id2label[i] for i in range(num_labels)]
     ))
 
-
+# Run the main function
 if __name__ == "__main__":
     main()
