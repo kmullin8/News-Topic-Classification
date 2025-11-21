@@ -1,3 +1,5 @@
+#Handles loading of config.yaml and injecting environment variables
+
 import yaml
 import os
 from pathlib import Path
@@ -11,7 +13,9 @@ def load_config(path: str = "config.yaml"):
     Loads YAML config and merges environment variables.
     """
 
-    config_path = Path(path)
+    config_path = Path(path)    # Convert string path → Path object
+
+    # Check if config file exists
     if not config_path.exists():
         raise FileNotFoundError(f"Config file not found at: {config_path}")
 
@@ -19,7 +23,7 @@ def load_config(path: str = "config.yaml"):
     with open(config_path, "r") as f:
         cfg = yaml.safe_load(f)
 
-    # Merge environment variables (MongoDB, API keys, etc.)
+    # Merge environment variables (MongoDB, API keys, etc.)   
     cfg["mongo_uri"] = os.getenv("MONGO_URI")
     cfg["mongo_db"] = os.getenv("MONGO_DB")
 
