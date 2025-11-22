@@ -201,14 +201,35 @@ For this step I will:
 - [ ] Fine-tune `distilbert-base-uncased` on 20 labels
 - [ ] Save model + tokenizer → `models/distilbert_20ng/`
 
-**Tips:**
-- Start with small epochs for sanity checks  
-- Validate after each epoch to monitor overfitting
+**Results:**
 
-**test:**
-- [ ] Training runs without crashes  
-- [ ] Accuracy ≥ 85–90%  
-- [ ] Inference script gives reasonable predictions
+**Loss and accuracy per epoch**
+| Epoch | Eval Loss | Accuracy | Macro F1 |
+| ----- | --------- | -------- | -------- |
+| **1** | **1.056** | 0.680    | 0.653    |
+| **2** | **1.038** | 0.702    | 0.686    |
+| **3** | **1.053** | 0.714    | 0.702    |
+
+**Best & Worst Performing Categories**
+| Rank  | Category             | F1-Score                                      |
+| ----- | -------------------- | --------------------------------------------- |
+| **1** | `rec.sport.hockey`   | **0.90**                                      |
+| **2** | `rec.sport.baseball` | **0.86**                                      |
+| **3** | `misc.forsale`       | **0.83** *(tied closely with several others)* |
+
+| Rank          | Category             | F1-Score |
+| ------------- | -------------------- | -------- |
+| **1 (Worst)** | `talk.religion.misc` | **0.31** |
+| **2**         | `alt.atheism`        | **0.49** |
+| **3**         | `talk.politics.misc` | **0.51** |
+
+
+**Training performance**
+| Metric                  | Value                            |
+| ----------------------- | -------------------------------- |
+| **Total Training Time** | **(~14.3 hours)** |
+| **Training Throughput** | 0.041 steps/sec                  |
+| **Samples/sec**         | 0.658 samples/sec                |
 
 ---
 
