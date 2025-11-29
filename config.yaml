@@ -4,6 +4,7 @@
 paths:
   data_dir: "data"                        # where raw and processed data will be stored
   distilbert_20ng_dir: "models/bert_20ng" # where the 20NG model will be saved
+  distilbert_rcv1_dir: "models/bert_rcv1" # where the RCV1 model will be saved
 
 # RSS feeds used by the live scraper
 rss_sources:
@@ -16,6 +17,12 @@ scraping:
 #hyperparameters for fine-tuning
 training:
   twenty_ng:
+    max_length: 512
+    batch_size: 16
+    learning_rate: 0.00005
+    num_epochs: 3
+
+  rcv1:
     max_length: 512
     batch_size: 16
     learning_rate: 0.00005
