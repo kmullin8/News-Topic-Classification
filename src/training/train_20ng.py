@@ -16,7 +16,7 @@ from transformers import (
 )
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 
-from src.data.loader import load_20ng_dataset
+from src.data.loader_20ng import load_20ng_dataset
 from src.utils.config_loader import load_config
 
 
