@@ -16,8 +16,8 @@
   -1:30 - 3:30, documenting and analysing code
 
 11/29,
-  -9:30 - 11
+  -9:30 - 11, implemented train rcv1 and train rcv1 jupiter notebook, figuring out how to use google colab gpu for training
 
-  -4:30 - 
+  -4:30 - 12:30, trying to implement bert20ng model and a starting point for rcv1 model
 
 total time 7hr, 30min
