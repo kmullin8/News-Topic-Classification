@@ -20,4 +20,9 @@
 
   -4:30 - 12:30, trying to implement bert20ng model and a starting point for rcv1 model
 
+11/30
+  -10:30 - 12, migrating rcv1 trainer to colab
+
+  -2:30 - 3:30, applied to rcv1 data set, made reuters21578 trainer and got it ready to convert to rcv1 data set, trained bert reuters21578 model in colab, uploaded files to this project 
+
 total time 7hr, 30min
