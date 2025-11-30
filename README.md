@@ -249,14 +249,35 @@ For this step I will:
 - [ ] Fine-tune using `BCEWithLogitsLoss`
 - [ ] Save model → `models/distilbert_20ng_reuters/`
 
-**Tips:**
-- You can limit to top 50 topics to simplify  
-- Handle imbalance with class weights
+-change of plans, becuase I have to apply for the rcv1 dataset I will train on a simular dataset reuters21578 as a place holder untill I have acces to the rcv1 dataset
 
-**test:**
-- [ ] Loss decreases during training  
-- [ ] Predictions make sense (“ECONOMICS”, “DEFENSE”, etc.)  
-- [ ] Compute micro/macro F1 on validation set
+**Reuters21578 Results:**
+
+**Loss and accuracy per epoch**
+| Epoch     | Eval Loss  | Accuracy   | Macro F1   |
+| --------- | ---------- | ---------- | ---------- |
+| **Final** | **0.5787** | **0.8548** | **0.4621** |
+
+**Best & Worst Performing Categories**
+| Rank  | Category  | F1-Score  |
+| ----- | --------- | --------- |
+| **1** | `housing` | **1.000** |
+| **2** | `sugar`   | **0.957** |
+| **3** | `earn`    | **0.951** |
+
+| Rank          | Category | F1-Score  |
+| ------------- | -------- | --------- |
+| **1 (Worst)** | `wpi`    | **0.000** |
+| **2**         | `yen`    | **0.000** |
+| **3**         | `zinc`   | **0.000** |
+
+**Training performance**
+| Metric                  | Value                                 |
+| ----------------------- | ------------------------------------- |
+| **Total Training Time** | ~40 seconds per epoch *(≈120s total)* |
+| **Training Throughput** | ~32 steps/sec                         |
+| **Samples/sec**         | ~510 samples/sec                      |
+
 
 ---
 
