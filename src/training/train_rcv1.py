@@ -98,7 +98,7 @@ def main():
     # Model
     # -------------------------------------------------------
     model = AutoModelForSequenceClassification.from_pretrained(
-        config["paths"]["distilbert_20ng_dir"],
+        "distilbert-base-uncased",
         num_labels=num_labels,
         id2label=id2label,
         label2id=label2id,
