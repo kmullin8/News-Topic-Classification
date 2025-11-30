@@ -16,6 +16,8 @@
   -1:30 - 3:30, documenting and analysing code
 
 11/29,
-  -9:30
+  -9:30 - 11
+
+  -4:30 - 
 
 total time 7hr, 30min
