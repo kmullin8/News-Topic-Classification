@@ -15,14 +15,14 @@
 11/21, 2hr
   -1:30 - 3:30, documenting and analysing code
 
-11/29,
+11/29, 9hr, 30min
   -9:30 - 11, implemented train rcv1 and train rcv1 jupiter notebook, figuring out how to use google colab gpu for training
 
   -4:30 - 12:30, trying to implement bert20ng model and a starting point for rcv1 model
 
-11/30
+11/30, 2hr, 30min
   -10:30 - 12, migrating rcv1 trainer to colab
 
   -2:30 - 3:30, applied to rcv1 data set, made reuters21578 trainer and got it ready to convert to rcv1 data set, trained bert reuters21578 model in colab, uploaded files to this project 
 
-total time 7hr, 30min
+total time 23hr, 30min
