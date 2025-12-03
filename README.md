@@ -97,43 +97,65 @@ sequenceDiagram
 
 ```
 News-Topic-Classification/
-├── config.yaml                 # Global configuration (paths, RSS feeds, scraper settings)
-├── requirements.txt            # Pinned runtime dependencies for reproducible installs
-├── .env                        # Environment variables (MongoDB URI, DB name)
+├── config.yaml                 # Global config (paths, model dirs, RSS sources, scraper settings)
+├── requirements.txt            # Reproducible environment dependencies
+├── .gitignore                  # Ignore rules for models, data, notebooks, etc.
+├── LICENSE                     # Project license
+├── README.md                   # Project overview and usage instructions
+├── sanity_check.py             # Ensures imports, configs, and environment are working
+├── TimeLog.md                  # Work/time tracking for project documentation
 │
-├── data/                       # Raw datasets, processed datasets, and scraped articles
-│   ├── raw/                    # Downloaded datasets (20NG, RCV1-v2, etc.)
-│   └── scraped/                # Raw scraped articles (HTML, extracted text)
-│   └── processed/              # Tokenized / cleaned datasets ready for training
+├── models/                     # All model checkpoints
+│   ├── bert_20ng/              # DistilBERT fine-tuned on 20 Newsgroups
+│   │   ├── config.json
+│   │   ├── model.safetensors
+│   │   ├── special_tokens_map.json
+│   │   ├── tokenizer_config.json
+│   │   ├── tokenizer.json
+│   │   └── vocab.txt
+│   │
+│   └── bert_reuters21578/      # Trained model for Reuters-21578 dataset
+│       ├── bert_reuters21578.zip
+│       ├── config.json
+│       ├── model.safetensors
+│       ├── special_tokens_map.json
+│       ├── tokenizer_config.json
+│       ├── tokenizer.json
+│       └── vocab.txt
 │
-├── models/                     # Saved model checkpoints
-│   └── bert_20ng/              # Fine-tuned DistilBERT weights + tokenizer files
+├── scripts/                    # Convenience shell scripts for automation
+│   ├── ingest_rss.sh           # Runs RSS polling → database insertion
+│   └── run_train_20ng.sh       # Fine-tune DistilBERT on 20NG
 │
-├── src/                        # All project source code (modular architecture)
-│   ├── data/                   # Dataset loaders, tokenizers, preprocessing utilities
-│   │   └── loader.py           # Loads 20NG, RCV1-v2, and scraped text into HF Datasets
-│   │
-│   ├── scraping/               # Web scraping + RSS ingestion pipeline
-│   │   ├── rss_poll.py         # Polls RSS feeds and extracts article links
-│   │   ├── scrape_url.py       # Scrapes a single URL → article text + metadata
-│   │   └── clean_text.py       # Cleaning, normalization, and text sanitization
-│   │
-│   ├── training/               # Training pipelines and training utilities
-│   │   └── train_20ng.py       # DistilBERT fine-tuning on 20 Newsgroups
-│   │
-│   ├── inference/              # Article classification pipeline
-│   │   └── inference.py        # Loads trained model → classifies new articles
-│   │
-│   ├── utils/                  # Shared helpers (config loading, logging, etc.)
-│   │   └── config_loader.py    # Loads config.yaml + merges .env secrets
-│   │
-│   └── sanity_check.py         # Verifies that all required imports are available
-│
-├── notebooks/                  # Jupyter notebooks for experiments and exploration
-└── scripts/                    # Optional setup or utility scripts (e.g., RSS testing)
-    ├── ingest_rss.sh           # Shell script to poll RSS feeds and save articles
-    ├── run_train_20ng.sh       # Runs DistilBERT training on the 20 Newsgroups dataset
-    └── run_train_rcv1.sh       # Runs continued fine-tuning on the Reuters RCV1-v2 dataset
+└── src/                        # Core project source code
+    ├── data/                   # Dataset loaders and preprocessing
+    │   └── loader_20ng.py      # Loads + converts 20NG into HuggingFace DatasetDict
+    │
+    ├── db/                     # Database layer (MongoDB)
+    │   ├── __init__.py
+    │   └── mongo_client.py     # Creates MongoDB client connection using config/env
+    │
+    ├── inference/              # Model inference pipeline
+    │   ├── __init__.py
+    │   └── inference.py        # Loads model + classifies text/articles
+    │
+    ├── scraping/               # Web scraping and RSS ingestion
+    │   ├── __init__.py
+    │   ├── clean_text.py       # HTML cleaning, normalization, token stripping
+    │   ├── rss_poll.py         # Polls RSS feeds → extracts links
+    │   └── scrape_url.py       # Extracts article title + body from a URL
+    │
+    ├── training/               # Training workflows and notebooks
+    │   ├── __init__.py
+    │   ├── train_20ng.py       # Full fine-tuning pipeline for 20NG
+    │   └── train_reuters21578.ipynb   # Jupyter notebook for training on Reuters-21578 
+    │
+    ├── utils/                  # Shared helper modules
+    │   ├── __init__.py
+    │   └── config_loader.py    # Loads config.yaml and resolves paths
+    │
+    └── __init__.py             # Allows the entire src/ folder to be imported as a package
+
 ```
 
 ## Technologies
