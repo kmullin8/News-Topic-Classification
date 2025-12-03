@@ -27,3 +27,6 @@
   - 10:30 - 12, migrating rcv1 trainer to colab
 
   - 2:30 - 3:30, applied to rcv1 data set, made reuters21578 trainer and got it ready to convert to rcv1 data set, trained bert reuters21578 model in colab, uploaded files to this project 
+
+12/3, 
+  - 11:30
