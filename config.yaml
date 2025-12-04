@@ -26,4 +26,4 @@ training:
 inference:
   model_dir: "models/bert_reuters21578"   # Default model to load
   max_length: 512                         # Token limit for classifier
-  device:
+  device: auto                          # Device for inference (cpu or cuda)
