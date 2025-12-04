@@ -31,4 +31,7 @@
 12/3, 
   - 11:30 - 1:30, implementing bert ruters model
 
-12/4, 12:00 - 
+12/4, 
+  - 12:00 - 1, refatoring ruters model in inference.py
+  - 3:30
+

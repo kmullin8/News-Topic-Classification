@@ -1,17 +1,23 @@
-#!/usr/bin/env python3
 """
-CLI tool for classifying a news article using src.inference.inference.classify_text
-
-Supports:
-    --title "..." --body "..."
-    --file article.txt [--title "..."]
-    --json (machine-readable output)
+CLI tool to classify a news article using the Reuters-trained DistilBERT model.
+Provides simple top-topic output or full JSON when requested.
 """
 
 import argparse
 import json
 import sys
+import warnings
+import os
 from pathlib import Path
+
+# ------------------------------------------------------------
+# Suppress all warnings from PyTorch & Transformers
+# ------------------------------------------------------------
+warnings.filterwarnings("ignore")
+os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
+os.environ["PYTORCH_JIT_WARN"] = "0"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+
 
 # Ensure src/ is importable when running from project root
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -26,14 +32,14 @@ def parse_args():
         description="Classify a news article using the Reuters-trained DistilBERT model."
     )
 
-    # Exactly one of: --body OR --file
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--body", type=str, help="Article body text")
-    group.add_argument("--file", type=str, help="Path to text file containing article body")
+    group.add_argument("--file", type=str, help="Path to text file containing the article body")
 
     parser.add_argument("--title", type=str, default="", help="Optional article title/headline")
-    parser.add_argument("--max_length", type=int, default=None, help="Override model max_length")
-    parser.add_argument("--json", action="store_true", help="Output full result as JSON")
+    parser.add_argument("--max_length", type=int, default=None)
+    parser.add_argument("--json", action="store_true",
+                        help="Print full JSON output instead of simplified output.")
 
     return parser.parse_args()
 
@@ -50,23 +56,33 @@ def main():
     else:
         body_text = args.body
 
+    # Run model inference
     result = classify_text(
         title=args.title,
         body=body_text,
         max_length=args.max_length,
     )
 
+    # JSON mode (if needed for debugging/automation)
     if args.json:
         print(json.dumps(result, indent=2, ensure_ascii=False))
         return
 
-    # Human-friendly summary
+    # ------------------------------------------------------------
+    # Simplified clean output: Only print top label + score
+    # ------------------------------------------------------------
+    main_topic = result["main_topic"]
+    score = result["topic_scores"][0]
+
+    #print(f"{main_topic} ({score:.5f})")
+
     print(f"\nMain topic: {result['main_topic']}\n")
     print("Top 5 topics:")
     for i, (label, score) in enumerate(zip(result["topics"], result["topic_scores"])):
         if i >= 5:
             break
         print(f"  {i+1}. {label:20s}  prob={score:.4f}")
+    print("\n")
 
 
 if __name__ == "__main__":
