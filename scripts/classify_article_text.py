@@ -11,35 +11,46 @@ import os
 from pathlib import Path
 
 # ------------------------------------------------------------
-# Suppress all warnings from PyTorch & Transformers
+# Hide noisy framework warnings (PyTorch / Transformers)
 # ------------------------------------------------------------
 warnings.filterwarnings("ignore")
 os.environ["TRANSFORMERS_NO_ADVISORY_WARNINGS"] = "1"
 os.environ["PYTORCH_JIT_WARN"] = "0"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 
-
-# Ensure src/ is importable when running from project root
+# ------------------------------------------------------------
+# Make the src/ directory importable (so classify_text can be found)
+# ------------------------------------------------------------
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-from src.inference.inference import classify_text  # noqa: E402
+# Core inference function (loads model + predicts)
+from src.inference.inference import classify_text
 
 
 def parse_args():
+    """
+    Define command-line arguments for the classifier.
+    Allows input text via --body or from a file via --file.
+    """
     parser = argparse.ArgumentParser(
         description="Classify a news article using the Reuters-trained DistilBERT model."
     )
 
+    # Input source: either raw text OR a text file
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("--body", type=str, help="Article body text")
     group.add_argument("--file", type=str, help="Path to text file containing the article body")
 
+    # Optional metadata and settings
     parser.add_argument("--title", type=str, default="", help="Optional article title/headline")
     parser.add_argument("--max_length", type=int, default=None)
-    parser.add_argument("--json", action="store_true",
-                        help="Print full JSON output instead of simplified output.")
+    parser.add_argument(
+        "--json",
+        action="store_true",
+        help="Return the full prediction dictionary in JSON format."
+    )
 
     return parser.parse_args()
 
@@ -47,7 +58,9 @@ def parse_args():
 def main():
     args = parse_args()
 
-    # Load body text
+    # ------------------------------------------------------------
+    # Load article body (either from file or --body argument)
+    # ------------------------------------------------------------
     if args.file:
         fp = Path(args.file)
         if not fp.exists():
@@ -56,34 +69,36 @@ def main():
     else:
         body_text = args.body
 
-    # Run model inference
+    # ------------------------------------------------------------
+    # Run inference through src.inference.inference.classify_text
+    # ------------------------------------------------------------
     result = classify_text(
         title=args.title,
         body=body_text,
         max_length=args.max_length,
     )
 
-    # JSON mode (if needed for debugging/automation)
+    # ------------------------------------------------------------
+    # JSON output mode for debugging or automated pipelines
+    # ------------------------------------------------------------
     if args.json:
         print(json.dumps(result, indent=2, ensure_ascii=False))
         return
 
     # ------------------------------------------------------------
-    # Simplified clean output: Only print top label + score
+    # Human-friendly output: top topic + top 5 ranked topics
     # ------------------------------------------------------------
-    main_topic = result["main_topic"]
-    score = result["topic_scores"][0]
-
-    #print(f"{main_topic} ({score:.5f})")
-
     print(f"\nMain topic: {result['main_topic']}\n")
+
     print("Top 5 topics:")
     for i, (label, score) in enumerate(zip(result["topics"], result["topic_scores"])):
         if i >= 5:
             break
         print(f"  {i+1}. {label:20s}  prob={score:.4f}")
+
     print("\n")
 
 
 if __name__ == "__main__":
+    # Entry point for CLI execution
     main()
