@@ -33,5 +33,5 @@
 
 12/4, 
   - 12:00 - 1, refatoring ruters model in inference.py
-  - 3:30
+  - 3:30 - 5, added print statments to inference.py and classify_article_text.py for better loggin while running and refactored code with documentation
 
