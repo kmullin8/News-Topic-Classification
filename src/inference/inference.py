@@ -42,6 +42,7 @@ def load_model(force_reload: bool = False):
 
     # Return cached model unless we explicitly reload
     if _MODEL is not None and not force_reload:
+        print("Model already loaded. Using cached instance.")
         return _TOKENIZER, _MODEL, _DEVICE, _ID2LABEL
 
     # Load global configuration (paths, inference settings)
@@ -58,7 +59,10 @@ def load_model(force_reload: bool = False):
 
     # Load tokenizer, model config, and model weights
     _TOKENIZER = AutoTokenizer.from_pretrained(model_dir)
+
     config = AutoConfig.from_pretrained(model_dir)
+
+    print("Loading model weights...")
     _MODEL = AutoModelForSequenceClassification.from_pretrained(model_dir, config=config)
     _MODEL.eval()
 
@@ -83,19 +87,23 @@ def load_model(force_reload: bool = False):
     # ---------------------------------------------
     # 2. FALLBACK → Use HF config.json id2label field
     # ---------------------------------------------
+    print("labels.json missing. Checking config.json id2label...")
     config_map = getattr(config, "id2label", None)
     if config_map:
         _ID2LABEL = {int(k): v for k, v in config_map.items()}
+        print(f"Loaded {len(_ID2LABEL)} labels from config.json.")
         return _TOKENIZER, _MODEL, _DEVICE, _ID2LABEL
 
     # ---------------------------------------------
     # 3. FINAL FALLBACK → Generate generic label names
     # ---------------------------------------------
+    print("No label mapping found. Generating placeholder labels...")
     num_labels = getattr(config, "num_labels", None)
     if num_labels is None:
         raise ValueError("Model missing id2label and num_labels fields.")
 
     _ID2LABEL = {i: f"LABEL_{i}" for i in range(num_labels)}
+    print(f"Generated {len(_ID2LABEL)} fallback labels.")
 
     return _TOKENIZER, _MODEL, _DEVICE, _ID2LABEL
 
@@ -113,6 +121,7 @@ def _build_text(title: Optional[str], body: str) -> str:
 # Main public API: classify text → return sorted topic predictions
 # ------------------------------------------------------------------
 def classify_text(title: Optional[str], body: str, max_length: Optional[int] = None):
+    print("Beginning classification...")
     tokenizer, model, device, id2label = load_model()
 
     # Use config default max_length if not manually provided
@@ -146,6 +155,7 @@ def classify_text(title: Optional[str], body: str, max_length: Optional[int] = N
     topics = [s[0] for s in scores]
     topic_scores = [s[1] for s in scores]
 
+    print("Classification complete")
     return {
         "main_topic": topics[0],       # Best predicted topic
         "topics": topics,             # Ordered list of labels

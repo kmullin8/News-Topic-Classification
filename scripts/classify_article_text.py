@@ -34,6 +34,8 @@ def parse_args():
     Define command-line arguments for the classifier.
     Allows input text via --body or from a file via --file.
     """
+    print("Parsing title and body arguments...")
+
     parser = argparse.ArgumentParser(
         description="Classify a news article using the Reuters-trained DistilBERT model."
     )
@@ -56,7 +58,10 @@ def parse_args():
 
 
 def main():
+    print("\n=== News Article Topic Classifier ===")
     args = parse_args()
+
+    print("Starting classifier...")
 
     # ------------------------------------------------------------
     # Load article body (either from file or --body argument)
@@ -69,6 +74,8 @@ def main():
     else:
         body_text = args.body
 
+    print("Input loaded. Calling inference engine...")
+
     # ------------------------------------------------------------
     # Run inference through src.inference.inference.classify_text
     # ------------------------------------------------------------
@@ -77,6 +84,8 @@ def main():
         body=body_text,
         max_length=args.max_length,
     )
+
+    print("Inference complete. Preparing output...")
 
     # ------------------------------------------------------------
     # JSON output mode for debugging or automated pipelines
@@ -88,7 +97,7 @@ def main():
     # ------------------------------------------------------------
     # Human-friendly output: top topic + top 5 ranked topics
     # ------------------------------------------------------------
-    print(f"\nMain topic: {result['main_topic']}\n")
+    print(f"\nMain topic: {result['main_topic']}")
 
     print("Top 5 topics:")
     for i, (label, score) in enumerate(zip(result["topics"], result["topic_scores"])):
