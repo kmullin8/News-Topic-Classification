@@ -104,9 +104,7 @@ def main():
         if i >= 5:
             break
         print(f"  {i+1}. {label:20s}  prob={score:.4f}")
-
     print("\n")
-
 
 if __name__ == "__main__":
     # Entry point for CLI execution
