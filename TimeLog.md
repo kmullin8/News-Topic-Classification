@@ -29,4 +29,6 @@
   - 2:30 - 3:30, applied to rcv1 data set, made reuters21578 trainer and got it ready to convert to rcv1 data set, trained bert reuters21578 model in colab, uploaded files to this project 
 
 12/3, 
-  - 11:30
+  - 11:30 - 1:30, implementing bert ruters model
+
+12/4, 12:00 - 

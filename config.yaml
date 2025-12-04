@@ -2,9 +2,9 @@
 
 # Root-level project filepaths
 paths:
-  data_dir: "data"                        # where raw and processed data will be stored
-  distilbert_20ng_dir: "models/bert_20ng" # where the 20NG model will be saved
-  distilbert_rcv1_dir: "models/bert_rcv1" # where the RCV1 model will be saved
+  data_dir: "data"                           # Root data directory
+  distilbert_20ng_dir: "models/bert_20ng"    # 20NG fine-tuned model
+  reuters21578_model_dir: "models/bert_reuters21578"  # Reuters model for inference
 
 # RSS feeds used by the live scraper
 rss_sources:
@@ -14,7 +14,7 @@ rss_sources:
 scraping:
   user_agent: "NewsTopicClassifierBot/0.1"
 
-#hyperparameters for fine-tuning
+# Hyperparameters for fine-tuning
 training:
   twenty_ng:
     max_length: 512
@@ -22,8 +22,8 @@ training:
     learning_rate: 0.00005
     num_epochs: 3
 
-  rcv1:
-    max_length: 512
-    batch_size: 16
-    learning_rate: 0.00005
-    num_epochs: 3
+# Inference settings for Step 4
+inference:
+  model_dir: "models/bert_reuters21578"   # Default model to load
+  max_length: 512                         # Token limit for classifier
+  device:
