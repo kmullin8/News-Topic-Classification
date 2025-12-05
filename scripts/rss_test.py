@@ -4,6 +4,7 @@ from pathlib import Path
 
 CONFIG_PATH = Path("config.yaml")
 
+# Titles RSS.app uses for fake or blocked feeds
 PLACEHOLDER_TITLES = [
     "not found",
     "sign up to rss.app",
@@ -17,9 +18,67 @@ def load_config():
 
 
 def is_placeholder_entry(entry):
-    """Detect RSS.app 'fake' entries that represent invalid feeds."""
+    """Detect RSS.app placeholder/fake entries."""
     title = getattr(entry, "title", "").lower()
-    return any(marker in title for marker in PLACEHOLDER_TITLES)
+    return any(term in title for term in PLACEHOLDER_TITLES)
+
+
+def is_valid_reuters_article(link: str) -> bool:
+    """
+    A REAL Reuters article link:
+    - starts with https://www.reuters.com/
+    - ends with /
+    - contains a date in the form -YYYY-MM-DD
+    """
+    if not link.startswith("https://www.reuters.com/"):
+        return False
+
+    if not link.endswith("/"):
+        return False
+
+    # Must contain a date pattern
+    parts = link.split("-")
+    if len(parts) < 4:
+        return False  # not enough sections for a date
+
+    # Simple check: last three parts should be YYYY MM DD-ish
+    try:
+        int(parts[-3])  # year
+        int(parts[-2])  # month
+        int(parts[-1].replace("/", ""))  # day (strip trailing slash)
+    except Exception:
+        return False
+
+    return True
+
+
+def has_useful_description(entry) -> bool:
+    """Ensure the description contains actual text, not only an image."""
+    desc = getattr(entry, "description", "")
+    return len(desc.strip()) > 50  # must have real content, not just an <img>
+
+
+def has_valid_pubdate(entry) -> bool:
+    return hasattr(entry, "published") and len(entry.published.strip()) > 10
+
+
+def is_good_entry(entry) -> bool:
+    """Combined filtering logic — only return true Reuters articles."""
+    link = getattr(entry, "link", "")
+
+    if is_placeholder_entry(entry):
+        return False
+
+    if not is_valid_reuters_article(link):
+        return False
+
+    if not has_useful_description(entry):
+        return False
+
+    if not has_valid_pubdate(entry):
+        return False
+
+    return True
 
 
 def test_rss_sources():
@@ -41,34 +100,25 @@ def test_rss_sources():
 
         feed = feedparser.parse(url)
 
-        # Case 1 — No entries
         if not feed.entries:
             print("     ❌ ERROR: No entries returned! Feed is invalid.")
             print("--------------------------------------------------\n")
             continue
 
-        # Case 2 — All placeholder content
-        if all(is_placeholder_entry(e) for e in feed.entries):
-            print("     ❌ ERROR: RSS.app placeholder feed detected — invalid or locked feed.")
+        # Filter valid entries only
+        valid_entries = [e for e in feed.entries if is_good_entry(e)]
+
+        if not valid_entries:
+            print("     ❌ ERROR: Feed has entries, but none are valid Reuters articles.")
             print("--------------------------------------------------\n")
             continue
 
-        # Case 3 — Valid feed
-        print(f"     Feed working: {len(feed.entries)} entries returned, Showing first {max_entries} entries:")
+        print(f"     Feed working: {len(valid_entries)} valid Reuters articles found.")
+        print(f"     Showing first {min(max_entries, len(valid_entries))} entries:")
 
         if print_output:
-            valid_count = 0
-
-            for entry in feed.entries[:max_entries]:
-                if is_placeholder_entry(entry):
-                    continue
-
-                link = getattr(entry, "link", "(no link)")
-                print(f"     Link {valid_count} :      {link}")
-                valid_count += 1
-
-            if valid_count == 0:
-                print("  ⚠ WARNING: All entries were placeholders — feed unusable.\n")
+            for i, entry in enumerate(valid_entries[:max_entries]):
+                print(f"     Link {i}: {entry.link}")
 
         print("--------------------------------------------------\n")
 
