@@ -1,6 +1,7 @@
 import yaml
 import feedparser
 from pathlib import Path
+from bs4 import BeautifulSoup
 
 CONFIG_PATH = Path("config.yaml")
 
@@ -15,6 +16,15 @@ PLACEHOLDER_TITLES = [
 def load_config():
     with open(CONFIG_PATH, "r") as f:
         return yaml.safe_load(f)
+
+
+def extract_clean_text(html: str) -> str:
+    """Extract readable text from Reuters RSS HTML description."""
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        return soup.get_text(" ", strip=True)
+    except Exception:
+        return html  # fallback if something unexpected happens
 
 
 def is_placeholder_entry(entry):
@@ -41,7 +51,6 @@ def is_valid_reuters_article(link: str) -> bool:
     if len(parts) < 4:
         return False  # not enough sections for a date
 
-    # Simple check: last three parts should be YYYY MM DD-ish
     try:
         int(parts[-3])  # year
         int(parts[-2])  # month
@@ -55,7 +64,7 @@ def is_valid_reuters_article(link: str) -> bool:
 def has_useful_description(entry) -> bool:
     """Ensure the description contains actual text, not only an image."""
     desc = getattr(entry, "description", "")
-    return len(desc.strip()) > 50  # must have real content, not just an <img>
+    return len(desc.strip()) > 50  # must include some real text
 
 
 def has_valid_pubdate(entry) -> bool:
@@ -101,7 +110,7 @@ def test_rss_sources():
         feed = feedparser.parse(url)
 
         if not feed.entries:
-            print("     ❌ ERROR: No entries returned! Feed is invalid.")
+            print("   ❌ ERROR: No entries returned! Feed is invalid.")
             print("--------------------------------------------------\n")
             continue
 
@@ -109,16 +118,20 @@ def test_rss_sources():
         valid_entries = [e for e in feed.entries if is_good_entry(e)]
 
         if not valid_entries:
-            print("     ❌ ERROR: Feed has entries, but none are valid Reuters articles.")
+            print("   ❌ ERROR: Feed has entries, but none are valid Reuters articles.")
             print("--------------------------------------------------\n")
             continue
 
-        print(f"     Feed working: {len(valid_entries)} valid Reuters articles found.")
-        print(f"     Showing first {min(max_entries, len(valid_entries))} entries:")
+        print(f"   Feed working: {len(valid_entries)} valid Reuters articles found.")
+        print(f"   Showing first {min(max_entries, len(valid_entries))} entries:")
 
         if print_output:
             for i, entry in enumerate(valid_entries[:max_entries]):
-                print(f"     Link {i}: {entry.link}")
+                clean_description = extract_clean_text(entry.description)
+
+                #print(f"     Link {i}: {entry.link}")
+                print(f"     Title {i}: {entry.title}")
+                print(f"     Description {i}: {clean_description}\n")
 
         print("--------------------------------------------------\n")
 

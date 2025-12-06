@@ -28,6 +28,9 @@ rss_sources:
 
   - name: "Reuters Currency"
     url: "https://rss.app/feeds/Ti6JQLomMrboDTiX.xml"
+
+  - name: "Reuters World"
+    url: "https://rss.app/feeds/HtnWqlEUaqEicaSg.xml"
   
 
 # RSS polling interval (in minutes)

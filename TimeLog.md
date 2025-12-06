@@ -38,4 +38,4 @@
 12/5:
   -10:30 - 11:30, implementing url scraper
 
-  -12:30 - 
+  -12:30 - 4:30, implementing rss testor and html parser
