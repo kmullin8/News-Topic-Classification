@@ -7,3 +7,4 @@ models/
 *.safetensors
 *.json
 output.txt
+venv/
