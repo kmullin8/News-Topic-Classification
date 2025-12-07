@@ -1,4 +1,4 @@
-**Total Time: 28hr**
+**Total Time: 33hr**
 
 
 11/14: 2hr, 45min
@@ -35,7 +35,10 @@
   - 12:00 - 1, refatoring ruters model in inference.py
   - 3:30 - 5, added print statments to inference.py and classify_article_text.py for better loggin while running and refactored code with documentation
 
-12/5:
-  -10:30 - 11:30, implementing url scraper
+12/5: 5hr
+  - 10:30 - 11:30, implementing url scraper
 
-  -12:30 - 4:30, implementing rss testor and html parser
+  - 12:30 - 4:30, implementing rss testor and html parser
+
+12/6:
+  - 3:30

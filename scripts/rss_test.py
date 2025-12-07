@@ -5,89 +5,88 @@ from bs4 import BeautifulSoup
 
 CONFIG_PATH = Path("config.yaml")
 
-# Titles RSS.app uses for fake or blocked feeds
-PLACEHOLDER_TITLES = [
-    "not found",
-    "sign up to rss.app",
-    "rss.app"
+# ======================================================
+# Unified unwanted-content patterns
+# (titles, descriptions, and boilerplate all handled here)
+# ======================================================
+
+UNWANTED_PATTERNS_TITLE = [
+    "sports",
+    "lifestyle",
+    "opinion",
+    "analysis:",               
+    "elliott wave",            
+    "powered by embedpress",
+    "palm pulse",              
 ]
+
+UNWANTED_PATTERNS_DESCRIPTION = [
+    "powered by embedpress",
+    "newsletter",
+    "subscribe",
+    "sign up",
+    "weekly",
+    "weekly roundup",
+    "career opportunities",
+    "check out",
+]
+
+BOILERPLATE_PATTERNS = [
+    "welcome to",
+    "subscribe",
+    "weekly",
+    "newsletter",
+    "sign up",
+    "career opportunities",
+]
+
+
+def extract_clean_text(html: str) -> str:
+    """Extract readable text from RSS HTML description."""
+    try:
+        soup = BeautifulSoup(html, "html.parser")
+        return soup.get_text(" ", strip=True)
+    except Exception:
+        return html  # fallback
+
+
+# ======================================================
+# Unified filter: ALL filtering happens here
+# ======================================================
+def should_filter_entry(title: str, description: str) -> bool:
+    """
+    Unified filtering logic for titles + descriptions.
+
+    Filters out entries if:
+    - Title contains any unwanted pattern
+    - Description contains any unwanted pattern
+    - Description contains 2+ boilerplate markers AND is short (<250 chars)
+    """
+
+    title_l = (title or "").lower()
+    desc_l = (description or "").lower()
+
+    # ---------- Hard title filters ----------
+    for pat in UNWANTED_PATTERNS_TITLE:
+        if pat in title_l:
+            return True
+
+    # ---------- Hard description filters ----------
+    for pat in UNWANTED_PATTERNS_DESCRIPTION:
+        if pat in desc_l:
+            return True
+
+    # ---------- Boilerplate detection ----------
+    boiler_count = sum(1 for p in BOILERPLATE_PATTERNS if p in desc_l)
+    if boiler_count >= 2 and len(desc_l) < 250:
+        return True
+
+    return False
 
 
 def load_config():
     with open(CONFIG_PATH, "r") as f:
         return yaml.safe_load(f)
-
-
-def extract_clean_text(html: str) -> str:
-    """Extract readable text from Reuters RSS HTML description."""
-    try:
-        soup = BeautifulSoup(html, "html.parser")
-        return soup.get_text(" ", strip=True)
-    except Exception:
-        return html  # fallback if something unexpected happens
-
-
-def is_placeholder_entry(entry):
-    """Detect RSS.app placeholder/fake entries."""
-    title = getattr(entry, "title", "").lower()
-    return any(term in title for term in PLACEHOLDER_TITLES)
-
-
-def is_valid_reuters_article(link: str) -> bool:
-    """
-    A REAL Reuters article link:
-    - starts with https://www.reuters.com/
-    - ends with /
-    - contains a date in the form -YYYY-MM-DD
-    """
-    if not link.startswith("https://www.reuters.com/"):
-        return False
-
-    if not link.endswith("/"):
-        return False
-
-    # Must contain a date pattern
-    parts = link.split("-")
-    if len(parts) < 4:
-        return False  # not enough sections for a date
-
-    try:
-        int(parts[-3])  # year
-        int(parts[-2])  # month
-        int(parts[-1].replace("/", ""))  # day (strip trailing slash)
-    except Exception:
-        return False
-
-    return True
-
-
-def has_useful_description(entry) -> bool:
-    """Ensure the description contains actual text, not only an image."""
-    desc = getattr(entry, "description", "")
-    return len(desc.strip()) > 50  # must include some real text
-
-
-def has_valid_pubdate(entry) -> bool:
-    return hasattr(entry, "published") and len(entry.published.strip()) > 10
-
-
-def is_good_entry(entry) -> bool:
-    """Combined filtering logic — only return true Reuters articles."""
-    link = getattr(entry, "link", "")
-
-    if is_placeholder_entry(entry):
-        return False
-
-    if not is_valid_reuters_article(link):
-        return False
-
-    if not has_useful_description(entry):
-        return False
-
-    if not has_valid_pubdate(entry):
-        return False
-
-    return True
 
 
 def test_rss_sources():
@@ -110,28 +109,35 @@ def test_rss_sources():
         feed = feedparser.parse(url)
 
         if not feed.entries:
-            print("   ❌ ERROR: No entries returned! Feed is invalid.")
+            print("   ❌ ERROR: No entries returned!")
             print("--------------------------------------------------\n")
             continue
 
-        # Filter valid entries only
-        valid_entries = [e for e in feed.entries if is_good_entry(e)]
+        entries = feed.entries
 
-        if not valid_entries:
-            print("   ❌ ERROR: Feed has entries, but none are valid Reuters articles.")
-            print("--------------------------------------------------\n")
-            continue
+        print(f"   Feed working: {len(entries)} total articles found.")
 
-        print(f"   Feed working: {len(valid_entries)} valid Reuters articles found.")
-        print(f"   Showing first {min(max_entries, len(valid_entries))} entries:")
+        shown = 0
 
         if print_output:
-            for i, entry in enumerate(valid_entries[:max_entries]):
-                clean_description = extract_clean_text(entry.description)
+            print(f"   Showing first {min(max_entries, len(entries))} valid entries:\n")
+            for entry in entries:
+                if shown >= max_entries:
+                    break
 
-                #print(f"     Link {i}: {entry.link}")
-                print(f"     Title {i}: {entry.title}")
-                print(f"     Description {i}: {clean_description}\n")
+                title = getattr(entry, "title", "")
+                description_raw = getattr(entry, "description", "")
+                description = extract_clean_text(description_raw)
+
+                # Apply unified filtering
+                if should_filter_entry(title, description):
+                    continue
+
+                print(f"     Link  {shown}: {getattr(entry, 'link', '')}")
+                print(f"     Title {shown}: {title}")
+                print(f"     Description {shown}: {description}\n")
+
+                shown += 1
 
         print("--------------------------------------------------\n")
 

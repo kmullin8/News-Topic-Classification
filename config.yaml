@@ -16,21 +16,68 @@ paths:
 # RSS feed testing settings
 rss_test:
   print_output: true     # Whether to print feed previews
-  max_entries: 3         # How many entries to show per feed
+  max_entries: 1         # How many entries to show per feed
 
 # RSS feeds used by the live scraper
 rss_sources:
-  - name: "Reuters Business"
-    url: "https://rss.app/feeds/d3IL5mzpxY5v4ORY.xml"
 
-  - name: "Reuters Commodities"
-    url: "https://rss.app/feeds/WF1v7IisbAQY86m2.xml"
+# TOP-LEVEL GENERAL ECONOMICS & MARKETS
 
-  - name: "Reuters Currency"
-    url: "https://rss.app/feeds/Ti6JQLomMrboDTiX.xml"
+  - name: "Global Economy – Investing.com (Macro)"
+    url: "https://www.investing.com/rss/news_25.rss"
 
-  - name: "Reuters World"
-    url: "https://rss.app/feeds/HtnWqlEUaqEicaSg.xml"
+  - name: "Global Markets – Investing.com (General News)"
+    url: "https://www.investing.com/rss/news.rss"
+
+
+# ENERGY (CRUDE, GAS, FUEL)
+
+  - name: "Energy Markets – OilPrice Main Feed"
+    url: "https://oilprice.com/rss/main"
+
+
+# METALS (GOLD, SILVER, COPPER, STEEL, ZINC, ETC.)
+  - name: "Commodity-TV Gold"
+    url: "https://www.commodity-tv.com/ondemand/channel/gold/rss.xml"
+
+  - name: "Commodity-TV Copper"
+    url: "https://www.commodity-tv.com/ondemand/channel/copper/rss.xml"
+
+
+# AGRICULTURE (GRAIN, WHEAT, LIVESTOCK, SOFT COMMODITIES)
+
+  - name: "Crop & Livestock – Western Producer"
+    url: "https://www.producer.com/feed/"
+
+  - name: "Vegetable Oil Market – Malaysian Palm Oil Board"
+    url: "https://www.mpoc.org.my/feed/"
+
+
+# FOREX (USD, MONEY-SUPPLY, INTEREST RATES)
+
+  - name: "Foreign Exchange – FXStreet"
+    url: "https://www.fxstreet.com/rss"
+
+
+# SHIPPING / LOGISTICS
+  - name: "Global Logistics – The Loadstar"
+    url: "https://theloadstar.com/feed/"
+
+# CHEMICALS (PET-CHEM, RUBBER, ETC.)
+  - name: "Chemicals & Petrochem – Chemistry World"
+    url: "https://www.chemistryworld.com/411.rss"
+
+
+# INTERNATIONAL TRADE
+  - name: "International Trade – Global Trade Magazine"
+    url: "https://www.globaltrademag.com/feed"
+
+  - name: "CNN World"
+    url: "http://rss.cnn.com/rss/cnn_world.rss"
+
+  - name: "CNN Business"
+    url: "http://rss.cnn.com/rss/money_latest.rss"
+
   
 
 # RSS polling interval (in minutes)
