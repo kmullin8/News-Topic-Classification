@@ -17,6 +17,9 @@ from datetime import datetime
 def run_pipeline(print_results: bool = True):
     print("\n========== PIPELINE START ==========\n")
 
+    # --------------------------------------------------
+    # poll RSS feeds
+    # --------------------------------------------------
     articles = poll_all_feeds()
     saved_count = 0
     skipped_count = 0
@@ -39,9 +42,7 @@ def run_pipeline(print_results: bool = True):
         # --------------------------------------------------
         # STEP 2 — Classification
         # --------------------------------------------------
-        print("Beginning classification...")
         pred = classify_text(title, body)
-        print("Classification complete")
 
         main_topic = pred["main_topic"]
         topic_score = pred["topic_scores"][0]

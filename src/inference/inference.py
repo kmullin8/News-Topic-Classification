@@ -100,6 +100,8 @@ def _build_text(title: Optional[str], body: str) -> str:
 # Main public API: classify text → topic + scores
 # ------------------------------------------------------------------
 def classify_text(title: Optional[str], body: str, max_length: Optional[int] = None):
+    print("Beginning classification...")
+    
     tokenizer, model, device, id2label = load_model()
 
     cfg = _CONFIG or {}
@@ -126,6 +128,8 @@ def classify_text(title: Optional[str], body: str, max_length: Optional[int] = N
 
     topics = [s[0] for s in scores]
     topic_scores = [s[1] for s in scores]
+
+    print("Classification complete")
 
     return {
         "main_topic": topics[0],
