@@ -13,13 +13,10 @@ paths:
 # PIPELINE SETTINGS
 # =====================================================================
 pipeline:
-  # When true, will save to MongoDB (future feature)
-  save_to_db: false
-
   # Print each classified article to console
   verbose_output: true
 
-  
+
 # ===============================
 # RSS Settings
 # ===============================
@@ -132,3 +129,12 @@ training:
     batch_size: 16
     learning_rate: 0.00005
     num_epochs: 3
+
+# =====================================================================
+# DATABASE SETTINGS
+# =====================================================================
+
+database:
+  enabled: true
+  collection: articles
+  uri_template: "mongodb+srv://{user}:{password}@{host}/?retryWrites=true&w=majority"
