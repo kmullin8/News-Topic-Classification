@@ -12,6 +12,7 @@ paths:
 # =====================================================================
 # PIPELINE SETTINGS
 # =====================================================================
+
 pipeline:
   # Print each classified article to console
   verbose_output: true
@@ -29,8 +30,7 @@ rss_test:
 # RSS feeds used by the live scraper
 rss_sources:
 
-# TOP-LEVEL GENERAL ECONOMICS & MARKETS
-
+  # TOP-LEVEL GENERAL ECONOMICS & MARKETS
   - name: "Global Economy – Investing.com (Macro)"
     url: "https://www.investing.com/rss/news_25.rss"
 
@@ -38,13 +38,12 @@ rss_sources:
     url: "https://www.investing.com/rss/news.rss"
 
 
-# ENERGY (CRUDE, GAS, FUEL)
-
+  # ENERGY (CRUDE, GAS, FUEL)
   - name: "Energy Markets – OilPrice Main Feed"
     url: "https://oilprice.com/rss/main"
 
 
-# METALS (GOLD, SILVER, COPPER, STEEL, ZINC, ETC.)
+  # METALS (GOLD, SILVER, COPPER, STEEL, ZINC, ETC.)
   - name: "Commodity-TV Gold"
     url: "https://www.commodity-tv.com/ondemand/channel/gold/rss.xml"
 
@@ -52,8 +51,7 @@ rss_sources:
     url: "https://www.commodity-tv.com/ondemand/channel/copper/rss.xml"
 
 
-# AGRICULTURE (GRAIN, WHEAT, LIVESTOCK, SOFT COMMODITIES)
-
+  # AGRICULTURE (GRAIN, WHEAT, LIVESTOCK, SOFT COMMODITIES)
   - name: "Crop & Livestock – Western Producer"
     url: "https://www.producer.com/feed/"
 
@@ -61,22 +59,21 @@ rss_sources:
     url: "https://www.mpoc.org.my/feed/"
 
 
-# FOREX (USD, MONEY-SUPPLY, INTEREST RATES)
-
+  # FOREX (USD, MONEY-SUPPLY, INTEREST RATES)
   - name: "Foreign Exchange – FXStreet"
     url: "https://www.fxstreet.com/rss"
 
 
-# SHIPPING / LOGISTICS
+  # SHIPPING / LOGISTICS
   - name: "Global Logistics – The Loadstar"
     url: "https://theloadstar.com/feed/"
 
-# CHEMICALS (PET-CHEM, RUBBER, ETC.)
+  # CHEMICALS (PET-CHEM, RUBBER, ETC.)
   - name: "Chemicals & Petrochem – Chemistry World"
     url: "https://www.chemistryworld.com/411.rss"
 
 
-# INTERNATIONAL TRADE
+  # INTERNATIONAL TRADE
   - name: "International Trade – Global Trade Magazine"
     url: "https://www.globaltrademag.com/feed"
 
@@ -90,21 +87,6 @@ rss_sources:
 
 # RSS polling interval (in minutes)
 rss_poll_interval_minutes: 30
-
-
-# ===============================
-# Scraping Configuration
-# ===============================
-
-# Web scraper settings
-scraper:
-  min_body_length: 200
-  user_agent: "Mozilla/5.0 NewsTopicClassifier"
-  timeout: 10
-
-# Scraper configuration
-scraping:
-  user_agent: "NewsTopicClassifierBot/0.1"
 
 
 # ===============================
