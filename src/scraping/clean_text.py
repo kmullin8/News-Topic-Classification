@@ -84,7 +84,7 @@ def extract_clean_text(html: str) -> str:
 
 
 # ======================================================
-# Date parsing logic (moved from rss_poll.py)
+# Date parsing logic 
 # ======================================================
 def parse_published_date(entry) -> datetime:
     """
