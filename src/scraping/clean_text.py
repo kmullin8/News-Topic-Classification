@@ -1,10 +1,32 @@
 """
-Centralized cleaning + filtering utilities for RSS ingestion.
+Centralized cleaning, filtering, and normalization utilities for RSS ingestion.
 Used by rss_poll.py and rss_test.py.
 """
 
 from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
+from datetime import datetime
+from dateutil import parser as dateparser
+from zoneinfo import ZoneInfo
 import warnings
+
+# ======================================================
+# Timezone configuration
+# ======================================================
+
+# Default timezone for normalized article timestamps
+TZ = ZoneInfo("America/Denver")
+
+# Map US timezone abbreviations → offsets (seconds)
+TZINFOS = {
+    "EST": -5 * 3600,
+    "EDT": -4 * 3600,
+    "CST": -6 * 3600,
+    "CDT": -5 * 3600,
+    "MST": -7 * 3600,
+    "MDT": -6 * 3600,
+    "PST": -8 * 3600,
+    "PDT": -7 * 3600,
+}
 
 # ======================================================
 # Unified unwanted-content patterns
@@ -59,6 +81,25 @@ def extract_clean_text(html: str) -> str:
             return soup.get_text(" ", strip=True)
         except Exception:
             return html.strip()
+
+
+# ======================================================
+# Date parsing logic (moved from rss_poll.py)
+# ======================================================
+def parse_published_date(entry) -> datetime:
+    """
+    Safely parse published/updated date from an RSS entry.
+    Falls back to local timezone 'now' if parsing fails.
+    """
+    raw = getattr(entry, "published", None) or getattr(entry, "updated", None)
+    if not raw:
+        return datetime.now(tz=TZ)
+
+    try:
+        dt = dateparser.parse(raw, tzinfos=TZINFOS)
+        return dt.astimezone(TZ)
+    except Exception:
+        return datetime.now(tz=TZ)
 
 
 # ======================================================
