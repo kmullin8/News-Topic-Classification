@@ -1,4 +1,4 @@
-**Total Time: 33hr**
+**Total Time: 36hr, 30min**
 
 
 11/14: 2hr, 45min
@@ -40,5 +40,5 @@
 
   - 12:30 - 4:30, implementing rss testor and html parser
 
-12/6:
-  - 3:30
+12/6: 3hr, 30min
+  - 3:30 - 7, implementing rss poll and db
