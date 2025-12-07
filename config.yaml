@@ -9,6 +9,17 @@ paths:
   reuters21578_model_dir: "models/bert_reuters21578"  # Reuters model for inference
 
 
+# =====================================================================
+# PIPELINE SETTINGS
+# =====================================================================
+pipeline:
+  # When true, will save to MongoDB (future feature)
+  save_to_db: false
+
+  # Print each classified article to console
+  verbose_output: true
+
+  
 # ===============================
 # RSS Settings
 # ===============================

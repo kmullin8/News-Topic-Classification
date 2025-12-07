@@ -1,0 +1,2769 @@
+
+========== PIPELINE START ==========
+
+
+[RSS] Polling 13 feeds...
+
+[RSS] Polling: Global Economy – Investing.com (Macro)
+[RSS] → 10 valid items.
+
+[RSS] Polling: Global Markets – Investing.com (General News)
+[RSS] → 10 valid items.
+
+[RSS] Polling: Energy Markets – OilPrice Main Feed
+[RSS] → 15 valid items.
+
+[RSS] Polling: Commodity-TV Gold
+[RSS] → 50 valid items.
+
+[RSS] Polling: Commodity-TV Copper
+[RSS] → 50 valid items.
+
+[RSS] Polling: Crop & Livestock – Western Producer
+[RSS] → 10 valid items.
+
+[RSS] Polling: Vegetable Oil Market – Malaysian Palm Oil Board
+[RSS] → 7 valid items.
+
+[RSS] Polling: Foreign Exchange – FXStreet
+[RSS] → 29 valid items.
+
+[RSS] Polling: Global Logistics – The Loadstar
+[RSS] → 10 valid items.
+
+[RSS] Polling: Chemicals & Petrochem – Chemistry World
+[RSS] → 17 valid items.
+
+[RSS] Polling: International Trade – Global Trade Magazine
+[RSS] → 10 valid items.
+
+[RSS] Polling: CNN World
+[RSS] → 28 valid items.
+
+[RSS] Polling: CNN Business
+[RSS] → 1 valid items.
+
+[RSS] TOTAL collected articles: 247
+
+Beginning classification...
+Loading model weights...
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/boeing-says-trumps-equity-stake-plan-doesnt-apply-to-big-us-defense-firms-4394695
+Title:     Boeing says Trump’s equity stake plan doesn’t apply to big US defense firms
+Published: 2025-12-07 00:18:28-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/trump-signs-order-to-create-food-supply-chain-task-forces-to-protect-competition-4394709
+Title:     Trump signs order to create food supply chain task forces to protect competition
+Published: 2025-12-06 23:42:27-07:00
+Category:  trade
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/exclusivepilots-union-blocks-allegiant-air-bid-to-get-us-residency-for-foreign-hires-4394666
+Title:     Pilots’ union blocks Allegiant Air bid to get US residency for foreign hires​
+Published: 2025-12-06 23:30:27-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/senior-us-diplomat-calls-eu-policies-bad-for-transatlantic-partnership-4394708
+Title:     Senior US diplomat calls EU policies bad for trans-Atlantic partnership
+Published: 2025-12-06 23:00:31-07:00
+Category:  trade
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/russia-stocks-lower-at-close-of-trade-moex-russia-index-unchanged-4394701
+Title:     Russia stocks lower at close of trade; MOEX Russia Index unchanged
+Published: 2025-12-06 21:20:02-07:00
+Category:  trade
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/us-waives-11-million-southwest-airlines-fine-imposed-over-2022-holiday-meltdown-4394696
+Title:     US waives $11 million Southwest Airlines fine imposed over 2022 holiday meltdown
+Published: 2025-12-06 21:18:46-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/indian-us-investigators-to-meet-next-week-on-air-india-crash-bloomberg-news-reports-4394682
+Title:     Indian, US investigators to meet next week on Air India crash, Bloomberg News reports
+Published: 2025-12-06 16:42:20-07:00
+Category:  shipping
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/volkswagen-to-invest-186-billion-through-2030-ceo-says-4394661
+Title:     Volkswagen to invest $186 billion through 2030, CEO says
+Published: 2025-12-06 10:30:28-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/brazil-robusta-coffee-growers-push-for-quality-amid-rising-prices-and-climate-concerns-4394660
+Title:     Brazil robusta coffee growers push for quality amid rising prices and climate concerns
+Published: 2025-12-06 10:12:29-07:00
+Category:  coffee
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/exclusiveadvents-1-billion-deal-talks-for-whirlpool-india-stake-collapse-sources-say-4394657
+Title:     Exclusive-Advent’s $1 billion deal talks for Whirlpool India stake collapse, sources say
+Published: 2025-12-06 10:00:29-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/economy-news/how-to-talk-to-your-family-about-the-economy-over-the-holidays-4386767
+Title:     How to talk to your family about the economy over the holidays
+Published: 2025-12-13 09:30:00-07:00
+Category:  gnp
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/world-news/hong-kong-election-turnout-in-focus-amid-anger-over-deadly-fire-4394702
+Title:     Hong Kong election turnout in focus amid anger over deadly fire
+Published: 2025-12-07 00:42:22-07:00
+Category:  cpi
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/boeing-says-trumps-equity-stake-plan-doesnt-apply-to-big-us-defense-firms-4394695
+Title:     Boeing says Trump’s equity stake plan doesn’t apply to big US defense firms
+Published: 2025-12-07 00:18:28-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/world-news/honduran-election-still-too-close-to-call-as-vote-counting-enters-seventh-day-4394689
+Title:     Honduran election still too close to call as vote counting enters seventh day
+Published: 2025-12-07 00:06:38-07:00
+Category:  gnp
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/world-news/trump-backs-roger-clemens-for-baseball-hall-of-fame-despite-performanceenhancing-drug-allegations-4394700
+Title:     On eve of Hall of Fame announcement, Trump revives call for Clemens induction
+Published: 2025-12-06 23:54:22-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/trump-signs-order-to-create-food-supply-chain-task-forces-to-protect-competition-4394709
+Title:     Trump signs order to create food supply chain task forces to protect competition
+Published: 2025-12-06 23:42:27-07:00
+Category:  trade
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/exclusivepilots-union-blocks-allegiant-air-bid-to-get-us-residency-for-foreign-hires-4394666
+Title:     Pilots’ union blocks Allegiant Air bid to get US residency for foreign hires​
+Published: 2025-12-06 23:30:27-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/world-news/zelenskiy-says-he-had-substantive-phone-call-with-us-special-envoy-witkoff-4394686
+Title:     Zelenskiy says he had "substantive" phone call with U.S. special envoy Witkoff
+Published: 2025-12-06 23:00:45-07:00
+Category:  trade
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/stock-market-news/senior-us-diplomat-calls-eu-policies-bad-for-transatlantic-partnership-4394708
+Title:     Senior US diplomat calls EU policies bad for trans-Atlantic partnership
+Published: 2025-12-06 23:00:31-07:00
+Category:  trade
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.investing.com/news/world-news/hegseth-says-he-would-have-ordered-second-strike-on-caribbean-vessel-4394707
+Title:     Hegseth says he would have ordered second strike on Caribbean vessel
+Published: 2025-12-06 22:54:33-07:00
+Category:  shipping
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Alternative-Energy/Nuclear-Power/DOE-Bets-Big-on-Costly-SMRs.html
+Title:     DOE Bets Big on Costly SMRs
+Published: 2025-12-06 17:00:00-07:00
+Category:  nat-gas
+Body:      This week, the US Department of Energy made two substantial financial awards to two SMR builders who each proposed 300 MW units. GE-Hitachi’s BWRX 300 will be built at a TVA facility, Clinch River in east Tennessee, while the two planned Holtec units are for repowering the Palisades nuclear plant in...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Energy-General/Graphene-Breakthrough-Challenges-Lithium-Ions-Dominance-in-Energy-Storage.html
+Title:     Graphene Breakthrough Challenges Lithium Ion's Dominance in Energy Storage
+Published: 2025-12-06 15:00:00-07:00
+Category:  nat-gas
+Body:      As the spread of renewable energy continues to ramp up around the world, finding more efficient and affordable technologies for energy storage has become a high-priority issue for global energy security. While energy storage addition is making huge strides across the world, leading technologies – mo...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Energy-General/China-Deepens-Its-Economic-Grip-on-Central-Asia.html
+Title:     China Deepens Its Economic Grip on Central Asia
+Published: 2025-12-06 11:00:00-07:00
+Category:  trade
+Body:      China’s trade with Central Asian states grew significantly during the first 10 months of 2025, compared with the same period in 2024, according to Chinese government statistics.  Trade turnover with Kyrgyzstan saw the largest spike, rising from $17.4 billion to $23.6 billion. What also makes Kyrgyzs...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Alternative-Energy/Solar-Energy/How-Mexico-Revived-Its-Renewable-Energy-Sector.html
+Title:     How Mexico Revived Its Renewable Energy Sector
+Published: 2025-12-06 09:00:00-07:00
+Category:  crude-oil
+Body:      After several years of stagnation in Mexico’s renewable energy sector, the introduction of more favourable reforms alongside several new solar energy agreements suggests that the Latin American country is pursuing a more diversified energy mix. After several years of energy policy that focused on gr...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Latest-Energy-News/World-News/Platts-Cuts-Out-Russian-Linked-Fuel-From-Price-Benchmarks.html
+Title:     Platts Cuts Out Russian-Linked Fuel From Price Benchmarks
+Published: 2025-12-06 07:07:17-07:00
+Category:  crude-oil
+Body:      Platts just redefined European oil pricing, and it did it with a single line: Russian-crude-derived fuels are out. Beginning Dec. 15 for cargoes and Jan. 2 for barges, any diesel or other oil product that can be traced back to Russian crude will simply not count in the assessments that shape benchma...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Energy-General/How-Falling-Energy-Supplies-Are-Undermining-Government-Promises.html
+Title:     How Falling Energy Supplies Are Undermining Government Promises
+Published: 2025-12-05 17:00:00-07:00
+Category:  cpi
+Body:      The world is filled with financial promises, including loans, pensions, and even the market value of stocks. So far, the system seems to be working, but in a finite world, it is hard to believe that the system will work indefinitely. Governments can create money simply by adding more promises, but t...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Energy-General/Electric-Motor-Market-Set-to-Triple-by-2032.html
+Title:     Electric Motor Market Set to Triple by 2032
+Published: 2025-12-05 15:00:00-07:00
+Category:  cpi
+Body:      The machinery that powers the modern world, from industrial assembly lines to the cooling systems of data centers, is undergoing a massive, capital-intensive overhaul. According to a new analysis by Allied Market Research, the global electric motor market is projected to reach $373.9 billion by 2032...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Geopolitics/International/Industrialized-Cybercrime-Targets-Trust-in-Public-and-Private-Sectors.html
+Title:     Industrialized Cybercrime Targets Trust in Public and Private Sectors
+Published: 2025-12-05 13:00:00-07:00
+Category:  money-supply
+Body:      The global cyber environment has become a “society wide crisis”, where a recent slew of attacks are threatening the foundation of Western economies, an expert has warned. A year-long avalanche of detrimental attacks on British retailers; Co-op, M&S, and more recently, Jaguar Land Rover (JLR); has po...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Latest-Energy-News/World-News/Oversupply-Warning-Jolts-Indias-Solar-Buildout.html
+Title:     Oversupply Warning Jolts India’s Solar Buildout
+Published: 2025-12-05 12:30:00-07:00
+Category:  aluminum
+Body:      India’s solar sector has hit that awkward stage of adolescence where ambition seems to be outpacing demand. And now the adults in the room are issuing critical warnings. A new letter from the clean-energy ministry, quietly circulated to the finance ministry, urges lenders to think twice before showe...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Crude-Oil/US-Oil-Rig-Count-Stages-A-Comeback-After-Last-Weeks-Losses.html
+Title:     US Oil Rig Count Stages A Comeback After Last Week’s Losses
+Published: 2025-12-05 11:19:00-07:00
+Category:  crude-oil
+Body:      The total number of active drilling rigs for oil and gas in the United States rose this week, according to new data that Baker Hughes published on Friday, after last week’s sharp decline. The total rig count in the US rose by 5 to 549 this week, according to Baker Hughes, down 40 from this same time...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Latest-Energy-News/World-News/Indian-ONGC-Set-to-Keep-Stake-in-Russias-Sakhalin-1-Oil-Projec.html
+Title:     Indian ONGC Set to Keep Stake in Russia’s Sakhalin-1 Oil Project
+Published: 2025-12-05 10:30:00-07:00
+Category:  crude-oil
+Body:      India’s Oil and Natural Gas Corporation Limited (ONGC) is moving to keep its 20% stake in the Sakhalin-1 oil project in Russia after the Kremlin allowed the Indian state-run company to pay its contribution to the project’s abandonment fund in rubles from the frozen dividends it is due, sources with ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Energy-General/How-Digital-Oilfields-Could-Unlock-320-Billion-in-Savings.html
+Title:     How Digital Oilfields Could Unlock $320 Billion in Savings
+Published: 2025-12-05 10:00:00-07:00
+Category:  crude-oil
+Body:      Digital innovation is rapidly emerging as a defining force for the oilfield services (OFS) sector as it adapts to changing market conditions, creating opportunities for steady, long-term growth. Rystad Energy predicts that in the next five years, the oil and gas industry could save more than $320 bi...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Latest-Energy-News/World-News/Chinas-Independent-Refiners-Boost-Crude-Buying-After-New-Import-Quotas.html
+Title:     China's Independent Refiners Boost Crude Buying After New Import Quotas
+Published: 2025-12-05 09:30:00-07:00
+Category:  crude-oil
+Body:      Helped by the newly-issued crude import quotas, China’s independent refiners are buying sanctioned Iranian crude again and raising their processing rates, making room for Iran’s oil to move out of floating and bonded storage and potentially easing the year-end glut on the market.  The independent re...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Energy/Oil-Prices/CPC-Cuts-Fail-to-Lift-Brent-as-Saudi-Pricing-Undercuts-Rally.html
+Title:     CPC Cuts Fail to Lift Brent as Saudi Pricing Undercuts Rally
+Published: 2025-12-05 09:19:26-07:00
+Category:  crude-oil
+Body:      Oil prices remained stuck in a narrow range this week, with Brent hovering around $63 per barrel. Friday, December 05, 2025 Oil prices remained rangebound this week, with ICE Brent still hovering around $63 per barrel, as the markets digested news of higher Russian oil export loadings in December an...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://oilprice.com/Latest-Energy-News/World-News/Heavy-Crude-Prices-Could-Surge-as-US-Venezuela-Tensions-Escalate.html
+Title:     Heavy Crude Prices Could Surge as U.S.-Venezuela Tensions Escalate
+Published: 2025-12-05 08:30:00-07:00
+Category:  crude-oil
+Body:      A loss of Venezuelan oil production in case of a U.S. military intervention will materially impact global benchmark prices as the market will have to replace Venezuela’s heavy crude—the bulk of Caracas’ crude exports, according to Rystad Energy.   Venezuela is estimated to pump about 1.1 million bar...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/rick-rule-i-am-buying-the-most-hated-commodities-now/
+Title:     Rick Rule: "I am Buying the Most Hated Commodities Now"
+Published: 2025-12-05 03:12:43-07:00
+Category:  grain
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/ptx-metals-advancing-a-polymetallic-project-in-ontario-canada-towards-development/
+Title:     PTX Metals: Advancing a Polymetallic Project in Ontario, Canada, Towards Development
+Published: 2025-12-04 05:49:29-07:00
+Category:  aluminum
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/southern-cross-gold-approved-shaft-reduces-exploration-costs-and-simplifies-access/
+Title:     Southern Cross Gold: Approved Shaft Reduces Exploration Costs and Simplifies Access
+Published: 2025-12-03 02:57:05-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-endeavour-silver-fury-gold-mines-and-osisko-development/
+Title:     Mining News Flash with Endeavour Silver, Fury Gold Mines and Osisko Development
+Published: 2025-12-02 02:16:33-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/kingfisher-metals-exploring-a-large-gold-copper-porphyry-project-in-british-columbia/
+Title:     Kingfisher Metals: Exploring a Large Gold-Copper Porphyry Project in British Columbia
+Published: 2025-11-26 08:03:41-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/minera-alamos-new-management-and-target-to-become-a-mid-size-gold-producer/
+Title:     Minera Alamos: New Management and Target to Become a Mid-Size Gold Producer
+Published: 2025-11-26 05:41:49-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/new-found-gold-ceo-on-the-merger-with-maritime-gold-and-the-plan-to-become-a-mid-tier-producer/
+Title:     New Found Gold: CEO on the Merger with Maritime Resources and the Plan to Become a Mid-Tier Producer
+Published: 2025-11-26 02:08:04-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/barton-gold-3-stage-production-plan-for-gold-in-australia/
+Title:     Barton Gold: 3-Stage Production Plan for Gold in Australia
+Published: 2025-11-25 08:04:41-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/viva-gold-advancing-the-tonopah-gold-project-in-the-us-towards-development/
+Title:     Viva Gold: Advancing the Tonopah Gold Project in the US Towards Development
+Published: 2025-11-25 05:54:20-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/fuerte-metals-developing-the-coffee-gold-project-in-yukon-pea-and-feasibility-study-in-2026/
+Title:     Fuerte Metals: Developing the Coffee Gold Project in Yukon, PEA and Feasibility Study in 2026
+Published: 2025-11-25 02:59:30-07:00
+Category:  coffee
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/gogold-resources-targeting-to-become-a-mid-tier-silver-producer-through-organic-growth/
+Title:     GoGold Resources: Targeting to Become a Mid-Tier Silver Producer Through Organic Growth
+Published: 2025-11-24 07:49:51-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/alpha-exploration-drilling-a-high-grade-gold-project-in-eritrea-first-resource-estimate-in-2026/
+Title:     Alpha Exploration: Drilling a High-Grade Gold Project in Eritrea - First Resource Estimate in 2026
+Published: 2025-11-24 01:40:17-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/antipa-minerals-developing-a-gold-project-in-australia-with-exploration-potential/
+Title:     Antipa Minerals: Developing a Gold-Copper Project in Australia with Exploration Potential
+Published: 2025-11-21 11:46:48-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/gold-x2-mining-updated-mineral-resource-and-pea-coming-very-soon-for-the-moss-gold-project/
+Title:     Gold X2 Mining: Updated Mineral Resource and PEA Coming Very Soon for the Moss Gold Project
+Published: 2025-11-21 07:36:13-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/stllr-gold-advancing-3-gold-projects-in-canada-towards-development-with-high-re-rating-potential/
+Title:     STLLR Gold: Advancing 3 Gold Projects in Canada Towards Development with High Re-Rating Potential
+Published: 2025-11-21 04:37:09-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/contango-ore-small-gold-production-in-alaska-with-organic-growth-plans/
+Title:     Contango Ore: Small Gold Production in Alaska with Organic Growth Plans
+Published: 2025-11-21 00:31:23-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/aurum-resources-fast-track-towards-production-of-gold-project-in-cote-divoire-pfs-coming-soon/
+Title:     Aurum Resources: Fast Track Towards Production of Gold Project in Côte d’Ivoire - PFS Coming Soon
+Published: 2025-11-20 13:32:29-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/trilogy-metals-developing-a-critical-metals-project-in-alaska-with-the-us-government-as-a-partner/
+Title:     Trilogy Metals: Developing a Critical Metals Project in Alaska with the US Government as a Partner
+Published: 2025-11-20 09:25:07-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/north-peak-resources-gold-drilling-towards-a-resource-estimate-at-prospect-mountain-project/
+Title:     North Peak Resources: Gold Drilling Towards a Resource Estimate at Prospect Mountain Project
+Published: 2025-11-20 03:15:02-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/newcore-gold-advancing-a-gold-project-in-ghana-with-favorable-economics/
+Title:     Newcore Gold: Advancing a Gold Project in Ghana with Favorable Economics
+Published: 2025-11-19 13:02:20-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/c3-metals-exploring-a-high-grade-copper-gold-porphyry-in-jamaica-with-freeport-mcmoran-as-a-partner/
+Title:     C3 Metals: Exploring a High-Grade Copper Gold Porphyry in Jamaica with Freeport-McMoRan as a Partner
+Published: 2025-11-19 09:58:17-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mithril-silver-x-gold-updated-resource-for-silver-gold-project-in-mexico-coming-in-q1-2026/
+Title:     Mithril Silver x Gold: Updated Resource for Silver Gold Project in Mexico Coming in Q1 2026
+Published: 2025-11-19 07:06:29-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/acg-metals-highly-profitable-copper-gold-production-in-turkey-with-organic-growth-plus-ma-plans/
+Title:     ACG Metals: Highly Profitable Copper-Gold Production in Turkey with Organic Growth Plus M&A Plans
+Published: 2025-11-19 00:44:27-07:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/osisko-development-project-financing-in-place-for-big-gold-project-in-canada-with-upscale-potential/
+Title:     Osisko Development: Project Financing in Place for Big Gold Project in Canada with Upscale Potential
+Published: 2025-11-18 06:02:53-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/medallion-metals-fast-development-of-gold-copper-silver-project-in-australia-towards-production/
+Title:     Medallion Metals: Fast Development of Gold-Copper-Silver Project in Australia Towards Production
+Published: 2025-11-18 01:11:05-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/power-metallic-exploring-and-developing-a-polymetallic-district-in-canada/
+Title:     Power Metallic: Exploring and Developing a Polymetallic District in Canada
+Published: 2025-11-17 12:31:48-07:00
+Category:  aluminum
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/scottie-resources-advancing-a-high-grade-gold-resource-in-canada-towards-production/
+Title:     Scottie Resources: Advancing a High-Grade Gold Resource in Canada Towards Production
+Published: 2025-11-17 07:39:52-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/fortuna-mining-ceo-on-strong-q3-results-and-diamba-sud-development-plans/
+Title:     Fortuna Mining: CEO on Strong Q3 Results and Diamba Sud Development Plans
+Published: 2025-11-17 05:37:12-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/avino-silver-and-gold-producing-3-million-oz-silver-in-mexico-and-strong-growth-plans/
+Title:     Avino Silver and Gold: Producing 3 Million Oz Silver in Mexico and Strong Growth Plans
+Published: 2025-11-14 04:20:57-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/ronald-stoeferle-the-big-long-pullback-or-peak/
+Title:     Ronald Stöferle: The Big Long - Pullback or Peak?
+Published: 2025-11-14 01:16:33-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/zuri-invest-mining-panel-with-goldquest-mining-silver-tiger-metals-and-uranium-energy/
+Title:     Zuri-Invest Mining Panel with GoldQuest Mining, Silver Tiger Metals and Uranium Energy
+Published: 2025-11-13 10:23:57-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/jochen-staiger-why-gold-silver-and-uranium-will-keep-rising/
+Title:     Jochen Staiger: Why Gold, Silver and Uranium Will Keep Rising
+Published: 2025-11-13 02:16:44-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/meridian-mining-ceo-on-the-preliminary-license-for-cabacal-and-whats-next/
+Title:     Meridian Mining: CEO on the Preliminary License for Cabaçal and What's Next
+Published: 2025-11-03 12:06:53-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/blue-moon-metals-three-polymetallic-projects-in-norway-and-the-usa-with-renowned-investors/
+Title:     Blue Moon Metals: Three Polymetallic Projects in Norway and the USA with Renowned Investors
+Published: 2025-10-31 03:15:44-06:00
+Category:  aluminum
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-fortuna-mining-miata-metals-canada-nickel-and-blue-moon-metals/
+Title:     Mining News Flash with Fortuna Mining, Miata Metals, Canada Nickel and Blue Moon Metals
+Published: 2025-10-30 01:19:27-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-goldmining-fury-gold-mines-endeavour-silver-and-gold-x2-mining/
+Title:     Mining News Flash with GoldMining, Fury Gold Mines, Endeavour Silver and Gold X2 Mining
+Published: 2025-10-29 02:17:50-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/vizsla-royalties-company-presentation-with-a-royalty-on-one-of-the-best-silver-districts/
+Title:     Vizsla Royalties: Company Presentation with a Royalty on One of the Best Silver Districts
+Published: 2025-10-21 05:02:47-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/globex-mining-has-262-royalties-options-and-available-properties-with-a-tight-share-structure/
+Title:     Globex Mining has 262 Royalties, Options and Available Properties with a Tight Share Structure
+Published: 2025-10-15 23:50:05-06:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/rua-gold-brown-field-exploration-at-multiple-projects-in-new-zealand/
+Title:     Rua Gold: Brown Field Exploration at Multiple Projects in New Zealand
+Published: 2025-10-15 04:18:00-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/abcourt-mines-small-gold-producer-with-upside-potential-and-more-projects-to-explore/
+Title:     Abcourt Mines: Small Gold Producer with Upside Potential and More Projects to Explore
+Published: 2025-10-14 01:28:30-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/goldgroup-mining-small-gold-production-in-the-us-with-large-growth-plans/
+Title:     Goldgroup Mining: Small Gold Production in the US with Large Growth Plans
+Published: 2025-10-13 12:15:43-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/cerrado-gold-gold-production-in-argentina-a-polymetallic-mine-in-portugal-with-large-growth-plans/
+Title:     Cerrado Gold: Gold Production in Argentina & a Polymetallic Mine in Portugal with Large Growth Plans
+Published: 2025-10-10 04:19:30-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/equinox-gold-valentine-and-greenstone-ramping-up-targeting-1-million-ounces-gold-production-in-2026mp4/
+Title:     Equinox Gold: Valentine and Greenstone Ramping Up, Targeting 1 Million Oz Gold Production in 2026
+Published: 2025-10-10 01:01:45-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/terrain-minerals-exploring-a-gold-project-in-western-australia-with-promising-first-results/
+Title:     Terrain Minerals: Exploring a Gold Project in Western Australia with Promising First Results
+Published: 2025-10-09 12:47:54-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/amex-exploration-advancing-a-very-high-grade-gold-project-with-incredible-economics-in-canada/
+Title:     Amex Exploration: Advancing a Very High-Grade Gold Project with Incredible Economics in Canada
+Published: 2025-10-09 06:04:13-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/55-north-mining-more-exploration-to-come-to-increase-small-gold-resource-in-northern-canada/
+Title:     55 North Mining: More Exploration to Come to Increase Small Gold Resource in Northern Canada
+Published: 2025-10-09 04:51:02-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/coppernico-metals-more-sampling-at-high-grade-copper-project-in-peru-for-the-coming-drill-program/
+Title:     Coppernico Metals: More Sampling at High-Grade Copper Project in Peru for the Coming Drill Program
+Published: 2025-10-08 13:41:12-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/stakeholder-gold-profitable-quarry-business-to-finance-copper-gold-exploration-in-canada/
+Title:     Stakeholder Gold: Profitable Quarry Business to Finance Copper-Gold Exploration in Canada
+Published: 2025-10-08 12:04:22-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/cassiar-gold-current-drill-program-to-expand-existing-gold-resource-in-british-columbia-canada/
+Title:     Cassiar Gold: Current Drill Program to Expand Existing Gold Resource in British Columbia, Canada
+Published: 2025-10-08 09:08:28-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/aurania-resources-ceo-announces-that-news-will-be-forthcoming-soon/
+Title:     Aurania Resources: CEO Announces that News Will be Forthcoming Soon
+Published: 2025-10-07 08:24:21-06:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/surge-copper-pfs-for-a-copper-molybdenum-project-coming-in-2026-stock-prices-rises-sharply/
+Title:     Surge Copper: PFS for a Copper-Molybdenum Project Coming in 2026 - Stock Prices Rises Sharply
+Published: 2025-12-05 09:16:53-07:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/ptx-metals-advancing-a-polymetallic-project-in-ontario-canada-towards-development/
+Title:     PTX Metals: Advancing a Polymetallic Project in Ontario, Canada, Towards Development
+Published: 2025-12-04 05:49:29-07:00
+Category:  aluminum
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/element-29-resources-copper-exploration-in-peru-updated-mineral-resource-in-2026/
+Title:     Element 29 Resources: Copper Exploration in Peru - Updated Mineral Resource in 2026
+Published: 2025-11-27 01:04:38-07:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/kingfisher-metals-exploring-a-large-gold-copper-porphyry-project-in-british-columbia/
+Title:     Kingfisher Metals: Exploring a Large Gold-Copper Porphyry Project in British Columbia
+Published: 2025-11-26 08:03:41-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/alpha-exploration-drilling-a-high-grade-gold-project-in-eritrea-first-resource-estimate-in-2026/
+Title:     Alpha Exploration: Drilling a High-Grade Gold Project in Eritrea - First Resource Estimate in 2026
+Published: 2025-11-24 01:40:17-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/antipa-minerals-developing-a-gold-project-in-australia-with-exploration-potential/
+Title:     Antipa Minerals: Developing a Gold-Copper Project in Australia with Exploration Potential
+Published: 2025-11-21 11:46:48-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/trilogy-metals-developing-a-critical-metals-project-in-alaska-with-the-us-government-as-a-partner/
+Title:     Trilogy Metals: Developing a Critical Metals Project in Alaska with the US Government as a Partner
+Published: 2025-11-20 09:25:07-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/c3-metals-exploring-a-high-grade-copper-gold-porphyry-in-jamaica-with-freeport-mcmoran-as-a-partner/
+Title:     C3 Metals: Exploring a High-Grade Copper Gold Porphyry in Jamaica with Freeport-McMoRan as a Partner
+Published: 2025-11-19 09:58:17-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/acg-metals-highly-profitable-copper-gold-production-in-turkey-with-organic-growth-plus-ma-plans/
+Title:     ACG Metals: Highly Profitable Copper-Gold Production in Turkey with Organic Growth Plus M&A Plans
+Published: 2025-11-19 00:44:27-07:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/green-bridge-metals-ceo-on-recent-financing-and-resource-for-the-copper-nickel-project-in-the-us/
+Title:     Green Bridge Metals: CEO on Recent Financing and Resource for the Copper-Nickel Project in the US
+Published: 2025-11-18 02:34:23-07:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/medallion-metals-fast-development-of-gold-copper-silver-project-in-australia-towards-production/
+Title:     Medallion Metals: Fast Development of Gold-Copper-Silver Project in Australia Towards Production
+Published: 2025-11-18 01:11:05-07:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/power-metallic-exploring-and-developing-a-polymetallic-district-in-canada/
+Title:     Power Metallic: Exploring and Developing a Polymetallic District in Canada
+Published: 2025-11-17 12:31:48-07:00
+Category:  aluminum
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/meridian-mining-ceo-on-the-preliminary-license-for-cabacal-and-whats-next/
+Title:     Meridian Mining: CEO on the Preliminary License for Cabaçal and What's Next
+Published: 2025-11-03 12:06:53-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/blue-moon-metals-three-polymetallic-projects-in-norway-and-the-usa-with-renowned-investors/
+Title:     Blue Moon Metals: Three Polymetallic Projects in Norway and the USA with Renowned Investors
+Published: 2025-10-31 03:15:44-06:00
+Category:  aluminum
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/arizona-sonoran-copper-ceo-on-positive-feasibility-study-and-whats-next/
+Title:     Arizona Sonoran Copper: CEO on Positive Feasibility Study and What's Next
+Published: 2025-10-23 05:57:34-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/arctic-minerals-further-exploration-to-increase-resource-of-copper-and-critical-minerals-in-sweden/
+Title:     Arctic Minerals: Further Exploration to Increase Resource of Copper and Critical Minerals in Sweden
+Published: 2025-10-16 05:43:11-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/cupani-metals-starting-to-explore-a-promising-copper-palladium-nickel-project-in-quebec-in-2026/
+Title:     CUPANI Metals: Starting to Explore a Promising Copper-Palladium-Nickel Project in Quebec in 2026
+Published: 2025-10-14 08:12:44-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/coppernico-metals-more-sampling-at-high-grade-copper-project-in-peru-for-the-coming-drill-program/
+Title:     Coppernico Metals: More Sampling at High-Grade Copper Project in Peru for the Coming Drill Program
+Published: 2025-10-08 13:41:12-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/aurania-resources-ceo-announces-that-news-will-be-forthcoming-soon/
+Title:     Aurania Resources: CEO Announces that News Will be Forthcoming Soon
+Published: 2025-10-07 08:24:21-06:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/axo-copper-exploring-a-high-grade-copper-project-with-historic-production-in-mexico/
+Title:     Axo Copper: Exploring a High-Grade Copper Project with Historic Production in Mexico
+Published: 2025-10-07 04:49:32-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mogotes-metals-drill-program-next-to-filo-del-sols-property-will-be-commenced-very-soon/
+Title:     Mogotes Metals: Drill Program Next to Filo del Sols Property Will be Commenced Very Soon
+Published: 2025-10-07 02:19:39-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/meridian-mining-more-drilling-at-santa-helena-and-pre-feasibility-study-for-cabacal-coming-soon/
+Title:     Meridian Mining: More Drilling at Santa Helena and Pre-Feasibility Study for Cabaçal Coming Soon
+Published: 2025-10-06 05:25:48-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-discovery-silver-arizona-sonoran-copper-and-isoenergy/
+Title:     Mining News Flash with Discovery Silver, Arizona Sonoran Copper and IsoEnergy
+Published: 2025-09-25 05:49:13-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-meridian-mining-gold-x2-mining-and-sibanye-stillwater/
+Title:     Mining News Flash with Meridian Mining, Gold X2 Mining and Sibanye-Stillwater
+Published: 2025-09-18 08:39:31-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-hannan-metals-sierra-madre-gold-silver-aurania-resources-and-goldmining/
+Title:     Mining News Flash with Hannan Metals, Sierra Madre Gold & Silver, Aurania Resources and GoldMining
+Published: 2025-09-10 06:41:12-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-arizona-sonoran-millenial-potash-and-southern-cross-gold/
+Title:     Mining News Flash with Arizona Sonoran, Millenial Potash and Southern Cross Gold
+Published: 2025-09-09 12:29:58-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/goldmining-overview-of-the-latest-developments-in-all-projects-and-whats-next/
+Title:     GoldMining: Overview of the Latest Developments in all Projects and What's Next
+Published: 2025-09-08 12:06:49-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/gold-royalty-ceo-on-record-revenue-in-q2-future-growth-and-strong-share-price-appreciation/
+Title:     Gold Royalty: CEO on Record Revenue in Q2, Future Growth and Strong Share Price Appreciation
+Published: 2025-09-05 06:42:34-06:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/meridian-mining-c50-million-financing-for-development-of-cabacal-and-further-exploration/
+Title:     Meridian Mining: C$50 Million Financing for Development of Cabaçal and Further Exploration
+Published: 2025-08-28 08:04:52-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/or-royalties-strong-increase-in-cash-flow-in-the-second-quarter-shares-rise-and-rise/
+Title:     OR Royalties: Strong Increase in Cash Flow in the Second Quarter - Shares Rise and Rise
+Published: 2025-08-27 02:44:53-06:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/news-with-southern-cross-gold-aurania-resources-meridian-mining-discovery-silver-and-fury-gold/
+Title:     News with Southern Cross Gold, Aurania Resources, Meridian Mining, Discovery Silver and Fury Gold
+Published: 2025-08-20 07:50:12-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-with-canada-nickel-uranium-energy-fortuna-mining-mogotes-metals-and-or-royalties/
+Title:     Mining News with Canada Nickel, Uranium Energy, Fortuna Mining, Mogotes Metals and OR Royalties
+Published: 2025-08-18 04:29:58-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/axo-copper-well-funded-high-grade-copper-exploration-in-mexico/
+Title:     Axo Copper: Well Funded High-Grade Copper Exploration in Mexico
+Published: 2025-08-12 08:45:03-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-revival-gold-mogotes-metals-green-bridge-metals-and-sibanye-stillwater/
+Title:     Mining News Flash with Revival Gold, Mogotes Metals, Green Bridge Metals and Sibanye-Stillwater
+Published: 2025-08-05 05:02:01-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-gold-royalty-us-goldmining-and-mag-silver/
+Title:     Mining News Flash with Gold Royalty, U.S. GoldMining and MAG Silver
+Published: 2025-07-31 03:59:36-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-sierra-madre-gold-and-silver-fury-gold-mines-and-arizona-sonoran-copper/
+Title:     Mining News Flash with Sierra Madre Gold and Silver, Fury Gold Mines and  Arizona Sonoran Copper
+Published: 2025-07-29 09:01:01-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-hannan-metals-southern-cross-gold-goldmining-endeavour-silver-and-isoenergy/
+Title:     Mining News Flash with Hannan Metals, Southern Cross Gold, GoldMining, Endeavour Silver and IsoEnergy
+Published: 2025-07-22 03:49:28-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/sibanye-stillwater-well-on-track-to-become-cash-flow-positive-again-restructuring-bears-fruits/
+Title:     Sibanye-Stillwater: Well On Track to Become Cash Flow Positive Again - Restructuring Bears Fruits
+Published: 2025-07-16 07:58:46-06:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/hannan-metals-ceo-gives-a-corporate-update-valiente-drill-results-available-shortly/
+Title:     Hannan Metals: CEO Gives a Corporate Update - Valiente Drill Results Available Shortly
+Published: 2025-07-16 02:43:42-06:00
+Category:  crude-oil
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/news-canada-nickel-fortuna-fury-gold-goldmining-meridian-or-royalties-southern-cross-gold/
+Title:     News: Canada Nickel, Fortuna, Fury Gold, GoldMining, Meridian, OR Royalties & Southern Cross Gold
+Published: 2025-06-26 04:16:08-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/copper-market-update-and-why-arizona-sonoran-copper-is-now-attractive/
+Title:     Copper Market Update and Why Arizona Sonoran Copper is Now Attractive
+Published: 2025-06-23 09:14:04-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/news-with-premier-american-uranium-endeavour-silver-fury-gold-hannan-mogotes-and-usgoldmining/
+Title:     News with Premier American Uranium, Endeavour Silver, Fury Gold, Hannan, Mogotes and U.S.GoldMining
+Published: 2025-06-18 06:02:15-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/commodities-update-on-gold-silver-copper-and-uranium-jochen-staiger/
+Title:     Commodities Update on Gold, Silver, Copper and Uranium - Jochen Staiger
+Published: 2025-06-17 08:23:28-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/green-bridge-metals-acquires-option-on-the-serpentine-copper-nickel-pge-project-in-the-usa/
+Title:     Green Bridge Metals Acquires Option on the Serpentine Copper-Nickel-PGE Project in the USA
+Published: 2025-06-09 05:00:59-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/meridian-mining-work-begins-on-the-definitive-feasibility-study-for-cabacal/
+Title:     Meridian Mining: Work Begins on the Definitive Feasibility Study for Cabaçal
+Published: 2025-06-02 02:03:56-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/arizona-sonoran-copper-good-progress-at-the-cactus-copper-project-in-the-usa/
+Title:     Arizona Sonoran Copper: Good Progress at the Cactus Copper Project in the USA
+Published: 2025-05-27 01:51:32-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/green-bridge-metals-acquires-the-copper-nickel-pge-serpentine-project-in-minnesota-usa/
+Title:     Green Bridge Metals Acquires the Copper-Nickel-PGE Serpentine Project in Minnesota, USA
+Published: 2025-05-13 12:36:55-06:00
+Category:  copper
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-with-gold-royalty-canada-nickel-and-goldshore-resources/
+Title:     Mining News with Gold Royalty, Canada Nickel and Goldshore Resources
+Published: 2025-05-02 08:45:00-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mining-news-flash-with-tudor-gold-skeena-gold-and-silver-and-meridian-mining/
+Title:     Mining News Flash with Tudor Gold, Skeena Gold and Silver and Meridian Mining
+Published: 2025-04-25 11:47:29-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.commodity-tv.com/play/mogotes-metals-ceo-insight-on-trench-results-at-cruz-del-sur-and-stockwork-hills/
+Title:     Mogotes Metals: CEO Insight on Trench Results at Cruz del Sur and Stockwork Hills
+Published: 2025-04-10 06:10:39-06:00
+Category:  gold
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/rural-municipalities-want-better-drought-plan/
+Title:     Rural municipalities want better drought plan
+Published: 2025-12-06 14:30:00-07:00
+Category:  grain
+Body:      The need for a long-term drought strategy remains, says the president of the Saskatchewan Association of Rural Municipalities....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/merit-bankruptcy-proceedings-begin/
+Title:     Merit bankruptcy proceedings begin
+Published: 2025-12-06 11:30:00-07:00
+Category:  acquisitions/mergers
+Body:      Winnipeg-based Merit Functional Foods filed for bankruptcy in October after being in receivership since 2023...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/duguid-named-to-mfga-wall-of-fame/
+Title:     Duguid named to MFGA Wall of Fame
+Published: 2025-12-06 06:30:00-07:00
+Category:  livestock
+Body:      Interlake farmer Mike Duguid has become the latest to join the Manitoba Forage and Grassland Association’s Wall of Fame....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/new-research-sheds-light-on-infertility-in-bulls/
+Title:     New research sheds light on infertility in bulls
+Published: 2025-12-05 15:06:47-07:00
+Category:  livestock
+Body:      Southern Alberta researchers make ground-breaking discovery in sperm function examining male infertility in bovines...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/icymi-your-national-ag-news-recap-for-dec-5-2025/
+Title:     ICYMI: your national ag news recap for Dec. 5, 2025
+Published: 2025-12-05 12:48:49-07:00
+Category:  grain
+Body:      StatCan sees record Canadian wheat and canola crops Canadian wheat and canola production hit new record highs in the 2025 to 26 crop year. That’s according to updated, survey-based estimates from Statistics Canada. Total wheat production was forecasted at just shy of 40 million tonnes, up from about...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/u-s-soybean-exports-strong-to-countries-other-than-china/
+Title:     U.S. soybean exports strong to countries other than China
+Published: 2025-12-05 10:39:34-07:00
+Category:  oilseed
+Body:      U.S. soybean sales to China have been disappointing, but the industry is making headway in other markets around the world....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/researchers-inch-closer-to-nitrogen-fixing-wheat/
+Title:     Researchers inch closer to nitrogen-fixing wheat
+Published: 2025-12-05 10:14:43-07:00
+Category:  grain
+Body:      Researchers from the University of California Davis have found a new approach to breeding nitrogen-fixing wheat....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/mexican-producers-drawn-to-canada/
+Title:     Mexican producers drawn to Canada
+Published: 2025-12-04 15:45:10-07:00
+Category:  livestock
+Body:      Mexican cattle breeders returned to Canadian Western Agribition again this year, and there was a resounding appreciation for the work of Canadian cattle producers....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/news/boosting-productivity-could-mean-historic-farm-revenues/
+Title:     Boosting productivity could mean historic farm revenues
+Published: 2025-12-04 15:21:21-07:00
+Category:  grain
+Body:      FCC report finds increasing productivity in the Canadian agriculture sector could mean $30 billion in farm revenue in the next decade...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.producer.com/crops/canadian-western-agribition-signs-deal-with-new-bedding-supplier/
+Title:     Canadian Western Agribition signs deal with new bedding supplier
+Published: 2025-12-04 15:14:32-07:00
+Category:  oilseed
+Body:      For the next five years, animals at Canadian Western Agribition will be bedding down on homegrown flax fibre rather than softwood shavings....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/indonesian-palm-oil-export-up-over-25-to-20-2-billion/?utm_source=rss&utm_medium=rss&utm_campaign=indonesian-palm-oil-export-up-over-25-to-20-2-billion
+Title:     Indonesian Palm Oil Export Up Over 25% to $20.2 Billion
+Published: 2025-12-04 00:35:33-07:00
+Category:  veg-oil
+Body:      Workers unload fresh fruit bunches in Sahayan River, Central Kalimantan on Nov. 5, 2025. (Antara Photo/Auliya Rahman) Jakarta. Indonesia registered a double-digit growth in its palm oil exports as of […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/palm-oil-resumes-advance-on-festive-demand-and-weather-risks/?utm_source=rss&utm_medium=rss&utm_campaign=palm-oil-resumes-advance-on-festive-demand-and-weather-risks
+Title:     Palm Oil Resumes Advance on Festive Demand and Weather Risks
+Published: 2025-12-04 00:24:33-07:00
+Category:  veg-oil
+Body:      Palm oil resumed gains on the outlook for rising demand, while traders monitored the impact of flooding in the world’s top growers. “Festival season buying has commenced,” said Gnanasekar Thiagarajan, […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/palm-tracks-dalian-chicago-edible-oils-higher/?utm_source=rss&utm_medium=rss&utm_campaign=palm-tracks-dalian-chicago-edible-oils-higher
+Title:     Palm Tracks Dalian, Chicago Edible Oils Higher
+Published: 2025-12-04 00:18:03-07:00
+Category:  veg-oil
+Body:      JAKARTA: Malaysian palm oil futures rose on Tuesday, tracking rival edible oils in Chicago and Dalian markets higher, while a weaker ringgit added support. The benchmark palm oil contract for […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/palm-oil-holds-three-day-gain-with-malaysian-stockpiles-in-focus/?utm_source=rss&utm_medium=rss&utm_campaign=palm-oil-holds-three-day-gain-with-malaysian-stockpiles-in-focus
+Title:     Palm Oil Holds Three-Day Gain with Malaysian Stockpiles in Focus
+Published: 2025-12-04 00:13:31-07:00
+Category:  veg-oil
+Body:      (Dec 1): Palm oil steadied after advancing the past three sessions, with robust Malaysian inventories poised to cap further gains. The country’s high stockpiles are expected to weigh on sentiment, […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/unlocking-opportunities-palm-acid-oil-in-the-european-market/?utm_source=rss&utm_medium=rss&utm_campaign=unlocking-opportunities-palm-acid-oil-in-the-european-market
+Title:     Unlocking Opportunities: Palm Acid Oil In The European Market
+Published: 2025-11-28 00:15:34-07:00
+Category:  veg-oil
+Body:      Understanding Palm Acid Oil Palm Acid Oil (PAO) is defined as a by-product obtained from the alkaline refining of palm oil, and it plays a crucial role in several industrial […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/chinese-buyers-urged-to-commit-to-long-term-palm-oil-deals-with-malaysia-for-better-prices-says-plantation-minister/?utm_source=rss&utm_medium=rss&utm_campaign=chinese-buyers-urged-to-commit-to-long-term-palm-oil-deals-with-malaysia-for-better-prices-says-plantation-minister
+Title:     Chinese Buyers Urged to Commit to Long-Term Palm Oil Deals With Malaysia For Better Prices, Says Plantation Minister
+Published: 2025-11-27 21:13:41-07:00
+Category:  veg-oil
+Body:      Plantation and Commodities Minister Datuk Seri Johari Abdul Ghani speaks at a press conference during the MPOC Trade Networking Visit Industry Dialogue in Kuala Lumpur today. — Bernama pic PETALING […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.mpoc.org.my/johari-drop-in-palm-oil-exports-to-china-due-to-price-not-geopolitics/?utm_source=rss&utm_medium=rss&utm_campaign=johari-drop-in-palm-oil-exports-to-china-due-to-price-not-geopolitics
+Title:     Johari: Drop in Palm Oil Exports to China Due to Price, Not Geopolitics
+Published: 2025-11-27 21:07:47-07:00
+Category:  veg-oil
+Body:      KUALA LUMPUR: The decline in Malaysia’s palm oil exports to China is driven primarily by pricing pressures rather than geopolitical factors.   Plantation and Commodities Minister Datuk Seri Johari […]...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/colombia-consumer-price-index-yoy-below-forecasts-545-in-november-actual-53-202512052300
+Title:     Colombia Consumer Price Index (YoY) below forecasts (5.45%) in November: Actual (5.3%)
+Published: 2025-12-05 16:00:51-07:00
+Category:  cpi
+Body:      Colombia Consumer Price Index (YoY) below forecasts (5.45%) in November: Actual (5.3%)...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/colombia-consumer-price-index-mom-came-in-at-007-below-forecasts-02-in-november-202512052300
+Title:     Colombia Consumer Price Index (MoM) came in at 0.07% below forecasts (0.2%) in November
+Published: 2025-12-05 16:00:50-07:00
+Category:  cpi
+Body:      Colombia Consumer Price Index (MoM) came in at 0.07% below forecasts (0.2%) in November...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/eur-usd-consolidates-at-11650-as-us-inflation-and-ecb-risks-shape-outlook-202512052213
+Title:     EUR/USD consolidates at 1.1650 as US inflation and ECB risks shape outlook
+Published: 2025-12-05 15:13:20-07:00
+Category:  trade
+Body:      On Friday, the EUR/USD remained steady, poised to finish the week with gains of 0.39%, trade subsided capped by the 1.1650 figure as traders eyed the Federal Reserve’s decision next week....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-cftc-gold-nc-net-positions-up-to-2047k-from-previous-1766k-202512052032
+Title:     United States CFTC Gold NC Net Positions up to $2047K from previous $176.6K
+Published: 2025-12-05 13:32:05-07:00
+Category:  earnings
+Body:      United States CFTC Gold NC Net Positions up to $2047K from previous $176.6K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/japan-cftc-jpy-nc-net-positions-rose-from-previous-y704k-to-y681k-202512052031
+Title:     Japan CFTC JPY NC Net Positions rose from previous ¥70.4K to ¥681K
+Published: 2025-12-05 13:31:57-07:00
+Category:  earnings
+Body:      Japan CFTC JPY NC Net Positions rose from previous ¥70.4K to ¥681K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-kingdom-cftc-gbp-nc-net-positions-down-to-ps-203k-from-previous-ps-168k-202512052031
+Title:     United Kingdom CFTC GBP NC Net Positions down to £-203K from previous £-16.8K
+Published: 2025-12-05 13:31:48-07:00
+Category:  earnings
+Body:      United Kingdom CFTC GBP NC Net Positions down to £-203K from previous £-16.8K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/australia-cftc-aud-nc-net-positions-down-to-739k-from-previous-658k-202512052031
+Title:     Australia CFTC AUD NC Net Positions down to $-739K from previous $-65.8K
+Published: 2025-12-05 13:31:41-07:00
+Category:  earnings
+Body:      Australia CFTC AUD NC Net Positions down to $-739K from previous $-65.8K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-cftc-oil-nc-net-positions-climbed-from-previous-398k-to-656k-202512052031
+Title:     United States CFTC Oil NC Net Positions climbed from previous 39.8K to 656K
+Published: 2025-12-05 13:31:35-07:00
+Category:  crude-oil
+Body:      United States CFTC Oil NC Net Positions climbed from previous 39.8K to 656K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/eurozone-cftc-eur-nc-net-positions-eu1073k-vs-eu1118k-202512052031
+Title:     Eurozone CFTC EUR NC Net Positions: €1073K  vs €111.8K
+Published: 2025-12-05 13:31:26-07:00
+Category:  earnings
+Body:      Eurozone CFTC EUR NC Net Positions: €1073K  vs €111.8K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-cftc-sp-500-nc-net-positions-fell-from-previous-1453k-to-1501k-202512052031
+Title:     United States CFTC S&P 500 NC Net Positions fell from previous $-145.3K to $-1501K
+Published: 2025-12-05 13:31:20-07:00
+Category:  earnings
+Body:      United States CFTC S&P 500 NC Net Positions fell from previous $-145.3K to $-1501K...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/canadian-dollar-soars-after-upbeat-labor-report-202512052016
+Title:     Canadian Dollar soars after upbeat labor report
+Published: 2025-12-05 13:16:57-07:00
+Category:  money-foreign
+Body:      The Canadian Dollar (CAD) found room on the high side on Friday, climbing nearly 0.9% and locking in a second straight week of firm gains for the Loonie. The CAD has gained nearly 2.2% bottom-to-top against the US Dollar (USD) since hitting seven-month lows in early November....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/dow-jones-industrial-average-climbs-150-points-after-cooler-pce-inflation-print-202512051924
+Title:     Dow Jones Industrial Average edges higher as PCE inflation cools, rate cut hopes solidify
+Published: 2025-12-05 13:07:00-07:00
+Category:  cpi
+Body:      The Dow Jones Industrial Average (DJIA) made slim gains on Friday, climbing another 150 points and ending a moderately bullish week near the 48,000 handle....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-consumer-credit-change-came-in-at-918b-below-expectations-105b-in-october-202512052001
+Title:     United States Consumer Credit Change came in at $9.18B, below expectations ($10.5B) in October
+Published: 2025-12-05 13:01:11-07:00
+Category:  interest
+Body:      United States Consumer Credit Change came in at $9.18B, below expectations ($10.5B) in October...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/gold-holds-strong-at-4-200-as-fed-cut-anticipation-builds-202512051922
+Title:     Gold holds strong at $4,200 as Fed-cut anticipation builds
+Published: 2025-12-05 12:22:00-07:00
+Category:  gold
+Body:      Gold (XAU/USD) advances during the North American session on Friday, poised to finish the week almost flat above the $4,200 figure as market participants brace for the Federal Reserve (Fed) monetary policy meeting next week....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/aud-usd-price-forecast-aussie-eyes-ytd-high-after-channel-breakout-202512051838
+Title:     AUD/USD Price Forecast: Aussie eyes YTD high after channel breakout
+Published: 2025-12-05 11:38:23-07:00
+Category:  money-foreign
+Body:      The Australian Dollar (AUD) extends its advance against the US Dollar (USD) on Friday, with AUD/USD climbing to its highest level since September 18 as traders are almost certain the Reserve Bank of Australia (RBA) will leave interest rates unchanged on December 9....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-baker-hughes-us-oil-rig-count-above-forecasts-409-actual-413-202512051801
+Title:     United States Baker Hughes US Oil Rig Count above forecasts (409): Actual (413)
+Published: 2025-12-05 11:01:21-07:00
+Category:  crude-oil
+Body:      United States Baker Hughes US Oil Rig Count above forecasts (409): Actual (413)...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/gold-trades-steady-as-markets-brace-for-delayed-us-pce-data-202512051159
+Title:     Gold slips from earlier highs as Dollar firms after steady US PCE data
+Published: 2025-12-05 10:34:37-07:00
+Category:  gold
+Body:      Gold (XAU/USD) erases earlier gains on Friday as a firmer US Dollar (USD) tempers bullish momentum, with the metal oscillating within the familiar range that has defined price action this week....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/netflix-nflx-buys-warner-bros-wbd-stock-in-major-trouble-202512051724
+Title:     Netflix (NFLX) buys Warner Bros (WBD), stock in major trouble
+Published: 2025-12-05 10:24:03-07:00
+Category:  acquisitions/mergers
+Body:      Shares of Netflix (NFLX) are under pressure, dropping over 3% following the announcement that it has reached a deal to acquire Warner Bros. Discovery (WBD). The acquisition is priced at $30 per share, valuing the total deal at $82 billion....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/fed-poised-for-third-straight-cut-boc-seen-on-hold-rbc-202512051641
+Title:     Fed poised for third straight cut, BoC seen on hold – RBC
+Published: 2025-12-05 09:41:26-07:00
+Category:  interest
+Body:      Dual central bank interest rate decisions from the U.S....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/eur-usd-pulls-back-as-greenback-finds-support-following-latest-us-data-202512051624
+Title:     EUR/USD pulls back as Greenback finds support following latest US data
+Published: 2025-12-05 09:24:05-07:00
+Category:  money-foreign
+Body:      The Euro (EUR) trims earlier gains against the US Dollar (USD) on Friday as the Greenback firms following the latest set of US economic releases....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/eur-usd-usd-slide-may-spur-2026-diversification-rabobank-202512051620
+Title:     EUR/USD: USD slide may spur 2026 diversification – Rabobank
+Published: 2025-12-05 09:20:54-07:00
+Category:  money-foreign
+Body:      The US Dollar’s (USD) sharp H1 2025 drop could push investors toward broader portfolios, though geopolitics and Fed risks may keep the currency unsettled....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/fed-poised-for-25bp-cut-to-350-375-rabobank-202512051616
+Title:     Fed poised for 25bp cut to 3.50–3.75% – Rabobank
+Published: 2025-12-05 09:16:29-07:00
+Category:  interest
+Body:      The FOMC is expected to deliver a 25bp rate cut with potential dissents, reflecting the tension between inflation risks and weakening employment. Federal Reserve (Fed) Gov....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/pound-sterling-price-news-and-forecast-gbp-usd-rises-as-fed-rate-cut-odds-boost-sterling-202512051600
+Title:     Pound Sterling Price News and Forecast: GBP/USD rises as Fed rate cut odds boost Sterling
+Published: 2025-12-05 09:00:51-07:00
+Category:  interest
+Body:      GBP/USD resumes its uptrend on Friday, trimming some of Thursday’s 0.21% losses as the Greenback recovered some ground. Inflation data in the US kept steady the chances for a Fed cut in the December meeting, weighing on the Dollar. At the time of writing, the pair trades at 1.3349 up 0.19%....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/gbp-usd-rises-as-fed-rate-cut-odds-boost-sterling-202512051558
+Title:     GBP/USD rises as Fed rate cut odds boost Sterling
+Published: 2025-12-05 08:58:11-07:00
+Category:  interest
+Body:      GBP/USD resumes its uptrend on Friday, trimming some of Thursday’s losses as the US Dollar (USD) recovers some ground. Inflation data in the US kept steady the chances of a Federal Reserve (Fed) cut at the December meeting, weighing on the Greenback....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/eur-gbp-price-forecast-sellers-dominate-as-momentum-turns-decisively-bearish-202512051518
+Title:     EUR/GBP Price Forecast: Sellers dominate as momentum turns decisively bearish
+Published: 2025-12-05 08:18:50-07:00
+Category:  money-foreign
+Body:      EUR/GBP remains under pressure on Friday as the Euro (EUR) continues to soften against a broadly supported British Pound (GBP). Sterling has held firm since the UK Autumn Budget, even as markets maintain strong expectations for a Bank of England (BoE) interest rate cut at the December 18 meeting....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/us-pce-price-index-rises-28-in-september-as-expected-202512051507
+Title:     US PCE Price Index rises 2.8% in September as expected
+Published: 2025-12-05 08:07:48-07:00
+Category:  cpi
+Body:      The Personal Consumption Expenditures (PCE) Price Index rose 2.8% on a yearly basis in September, the US Bureau of Economic Analysis (BEA) reported on Friday. This print followed the 2.7% increase recorded in August and came in line with the market expectation....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/us-uom-consumer-sentiment-index-is-seen-at-533-in-december-202512051504
+Title:     US UoM Consumer Sentiment Index rises to 53.3 in December
+Published: 2025-12-05 08:04:16-07:00
+Category:  cpi
+Body:      American consumer confidence edged higher in early December, as households grew more optimistic about current conditions and the broader economic outlook, according to preliminary data from the University of Michigan (UoM)....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-michigan-consumer-expectations-index-came-in-at-55-above-expectations-512-in-december-202512051500
+Title:     United States Michigan Consumer Expectations Index came in at 55, above expectations (51.2) in December
+Published: 2025-12-05 08:00:54-07:00
+Category:  cpi
+Body:      United States Michigan Consumer Expectations Index came in at 55, above expectations (51.2) in December...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fxstreet.com/news/united-states-uom-1-year-consumer-inflation-expectations-declined-to-41-in-december-from-previous-45-202512051500
+Title:     United States UoM 1-year Consumer Inflation Expectations declined to 4.1% in December from previous 4.5%
+Published: 2025-12-05 08:00:44-07:00
+Category:  cpi
+Body:      United States UoM 1-year Consumer Inflation Expectations declined to 4.1% in December from previous 4.5%...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/container-spot-rates-edge-back-up-but-carrier-hikes-may-not-hold/
+Title:     Container spot rates edge back up – but carrier hikes may not hold
+Published: 2025-12-05 06:27:49-07:00
+Category:  shipping
+Body:      Container spot freight rates out of Asia on the deepsea trades to North America and Europe were lifted this week by carrier-led price increases. This meant that after last week’s decline, spot rates on the Asia-Europe trades resumed the recent gradual increases seen over the latter half of October a...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/court-action-halts-dp-world-takeover-of-chittagongs-key-box-terminal/
+Title:     Court action halts DP World takeover of Chittagong’s key box terminal
+Published: 2025-12-05 06:16:34-07:00
+Category:  shipping
+Body:      A Bangladeshi high court has thrown the future of Chittagong port’s largest container terminal into uncertainty, issuing a split verdict that effectively suspends the government plan to hand operations of the New Mooring Container Terminal (NCT) to DP World. Two justices reached opposing conclusions...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/dhl-gf-rejects-buying-market-share-as-forwarders-brace-for-soft-2026-air-cargo-rates/
+Title:     DHL GF rejects buying market share, as forwarders brace for soft 2026 air rates
+Published: 2025-12-05 06:01:42-07:00
+Category:  earnings
+Body:      Large freight forwarders could need to pivot next year, with low airfreight rates expected to dampen their results. Predicting air cargo demand growth of just 2% to 3% in 2026, Niall van de Wouw, chief airfreight officer for Xeneta, explained: “We expect supply to grow more than demand in 2026, and ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/landmark-uk-us-pharma-agreement-deal-or-no-deal/
+Title:     ‘Landmark’ UK-US pharma agreement – ‘Deal or No Deal?’
+Published: 2025-12-05 05:35:28-07:00
+Category:  acquisitions/mergers
+Body:      We weren’t late to this; we were simply awaiting confirmation from both parties that the Whitehall-announced “landmark UK-US pharmaceuticals deal to safeguard medicines access and drive vital investment for UK patients and businesses” was, in fact, a go. Yes, US commerce secretary Howard Lutnick cam...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/vizhinjam-finishes-year-one-on-a-high-and-launches-1bn-expansion/
+Title:     Vizhinjam finishes year one on a high and launches $1bn expansion
+Published: 2025-12-05 05:27:43-07:00
+Category:  shipping
+Body:      Vizhinjam Port – India’s newest container transhipment hub – ended its first year of operations on a solid note, thanks to growing relay volumes from lone mainline customer MSC. The deepwater terminal reached full capacity, claimed to be a rare feat in the industry, handling some 1.3m teu from 615 s...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/ch-robinson-aviation-act-risk-what-risk/
+Title:     CH Robinson – Aviation Act risk? What risk?
+Published: 2025-12-05 05:21:34-07:00
+Category:  shipping
+Body:      The US Supreme Court has agreed to hear a freight broker liability case that some in the industry are calling “landmark” – but the real story in this very dull story (sorry about that!), isn’t about reshaping the business model. It’s about fixing a regulatory mess that shouldn’t exist in the first p...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/more-new-box-ships-ordered-but-few-2028-delivery-slots-are-left/
+Title:     More new box ships ordered, but few 2028 delivery slots are left
+Published: 2025-12-05 05:16:48-07:00
+Category:  shipping
+Body:      Tonnage providers have inked even more containership newbuildings this week, as charter rates remain elevated. George Economou’s TMS Group has returned to China’s Zhoushan Changhong International Shipyard for more newbuildings – eight 11,400 teu ships, with options for two more. The eight firm order...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/zim-weighs-mbo-worth-the-bother-for-other-carriers/
+Title:     Zim weighs MBO. Worth the bother for other carriers?
+Published: 2025-12-05 05:07:47-07:00
+Category:  acquisitions/mergers
+Body:      Given the recent news on a Zim takeover, Loadstar Premium has opened up this relevant September article to Loadstar readers. It’s certainly a juicy one for the gossips – Zim chief exec Eli Glickman is reportedly attempting an MBO with outside investors at a knock-off price; Zim shareholders respond ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/security-the-role-of-critical-thinking/
+Title:     Security: The role of critical thinking
+Published: 2025-12-05 05:05:32-07:00
+Category:  money-supply
+Body:      Complying with Australia’s Security of Critical Infrastructure (SOCI) legislation is an opportunity to improve the resilience of your logistics business – if you make the effort and take it seriously. Prevention is the best cure Any professionally managed business maintains a Business Continuity Pla...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://theloadstar.com/beware-your-chatgpt-logistics-strategy-is-now-legal-evidence/
+Title:     Beware – your ChatGPT logistics strategy is now legal evidence
+Published: 2025-12-05 04:48:29-07:00
+Category:  acquisitions/mergers
+Body:      A US federal court just handed down a ruling that should make every logistics company using AI immediately reconsider its data governance policies. OpenAI has been ordered to produce 20 million anonymized ChatGPT conversation logs in its copyright dispute with The New York Times, and while OpenAI fo...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/akzonobel-axalta-merger-gives-coatings-firm-extra-layers/4022614.article
+Title:     AkzoNobel-Axalta merger gives coatings firm extra layers
+Published: 2025-12-02 06:37:00-07:00
+Category:  acquisitions/mergers
+Body:      Pursuit of scale drives continued consolidation across coatings sector...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/taking-aerogel-insulation-from-spacecraft-to-living-space/4022593.article
+Title:     Taking aerogel insulation from spacecraft to living space
+Published: 2025-11-28 05:01:00-07:00
+Category:  aluminum
+Body:      Nanoplume’s bio-based materials are super-insulating but also cheap and scalable...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/ineos-asks-eu-to-intervene-over-unfair-chemical-imports/4022573.article
+Title:     Ineos asks EU to intervene over ‘unfair’ chemical imports
+Published: 2025-11-25 07:28:00-07:00
+Category:  trade
+Body:      Group says 10 key chemicals are being dumped cheaply, harming domestic industry...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/us-judge-to-approve-purdues-opioid-bankruptcy-deal/4022529.article
+Title:     US judge to approve Purdue’s opioid bankruptcy deal
+Published: 2025-11-18 07:46:00-07:00
+Category:  acquisitions/mergers
+Body:      Settlement allows for future lawsuits against Sackler family owners...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/south-african-lawsuit-challenges-sasols-ethylene-monopoly/4022475.article
+Title:     South African Lawsuit challenges Sasol’s ethylene monopoly
+Published: 2025-11-11 03:07:00-07:00
+Category:  Petrochemicals
+Body:      Plastics producer Safripol says high prices mean it can’t compete with imported materials...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/pfizer-wins-bidding-war-for-metsera-and-its-weight-loss-drugs/4022470.article
+Title:     Pfizer wins bidding war for Metsera and its weight-loss drugs
+Published: 2025-11-11 01:41:00-07:00
+Category:  acquisitions/mergers
+Body:      US firm matched Novo Nordisk’s rival bid and had backing of competition regulator...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/pfizer-and-novo-nordisks-battle-over-metsera/4022448.article
+Title:     Pfizer and Novo Nordisk’s battle over Metsera
+Published: 2025-11-07 06:19:00-07:00
+Category:  acquisitions/mergers
+Body:      Lawsuits fly in bidding war over developer of next generation weight loss drugs...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/novartis-spends-on-deals-to-offset-patent-losses/4022446.article
+Title:     Novartis spends on deals to offset patent losses
+Published: 2025-11-05 06:47:00-07:00
+Category:  acquisitions/mergers
+Body:      $12 billion Avidity acquisition is the latest pipeline-pumping transaction...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/how-a-weak-rubber-supply-chain-threatens-us-national-security/4022434.article
+Title:     How a weak rubber supply chain threatens US national security
+Published: 2025-11-03 08:10:00-07:00
+Category:  rubber
+Body:      Irene Yurovska raises the alarm on US reliance on Chinese imports for critical chemical additives...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/uk-firm-reaches-tonne-scale-mof-manufacturing/4022400.article
+Title:     UK firm reaches tonne scale MOF manufacturing
+Published: 2025-10-29 03:30:00-06:00
+Category:  aluminum
+Body:      Promethean Particles’s continuous flow process can produce carbon-capturing material at 100kg/hr...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/industry/biphenyl-20-years-of-restek-innovation/4022339.article
+Title:     Biphenyl: 20 years of Restek innovation
+Published: 2025-10-24 06:30:00-06:00
+Category:  Petrochemicals
+Body:      How Restek’s Biphenyl column changed chromatography...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/jandj-now-faces-talc-cancer-claims-in-the-uk/4022377.article
+Title:     J&J now faces talc cancer claims in the UK
+Published: 2025-10-23 05:00:00-06:00
+Category:  acquisitions/mergers
+Body:      Alongside nearly 70,000 US lawsuits, over 3000 claimants have filed joint UK legal action...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/algenesis-cracks-diisocyanate-problem-to-make-fully-bio-based-polyurethane/4022376.article
+Title:     Algenesis cracks diisocyanate problem to make fully bio-based polyurethane
+Published: 2025-10-23 03:00:00-06:00
+Category:  Petrochemicals
+Body:      Process combines algal fermentation with flow chemistry and avoids hazardous phosgene...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/basf-sells-coatings-business-to-carlyle-in-77-billion-deal/4022344.article
+Title:     BASF sells coatings business to Carlyle in €7.7 billion deal
+Published: 2025-10-17 07:32:00-06:00
+Category:  acquisitions/mergers
+Body:      Deal covers automotive and surface treatment businesses and follows earlier sale of decorative paints...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/at-least-16-dead-in-factory-and-chemical-warehouse-fire-in-bangladesh/4022322.article
+Title:     At least 16 dead in factory and chemical warehouse fire in Bangladesh
+Published: 2025-10-15 03:53:00-06:00
+Category:  gas
+Body:      Smoke and gas from chemical fire trapped and killed factory workers...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/16-dead-in-us-munitions-factory-explosion/4022316.article
+Title:     16 dead in US munitions factory explosion
+Published: 2025-10-14 06:22:00-06:00
+Category:  acquisitions/mergers
+Body:      Plant levelled by blast, whose cause remains under investigation...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.chemistryworld.com/news/23-indian-childrens-deaths-linked-to-contaminated-cough-syrup/4022312.article
+Title:     23 Indian children’s deaths linked to contaminated cough syrup
+Published: 2025-10-14 03:19:00-06:00
+Category:  oilseed
+Body:      Dietheylene glycol contamination highlights consequences of poor inspection and enforcement...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/chinas-global-shipbuilding-order-share-falls-to-65-in-2025/
+Title:     China’s Global Shipbuilding Order Share Falls to 65% in 2025
+Published: 2025-12-06 02:00:54-07:00
+Category:  shipping
+Body:      According to a report from the South China Morning Post, Chinese shipbuilders accounted for 65 per cent of global orders... Read More The post China’s Global Shipbuilding Order Share Falls to 65% in 2025 appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/u-s-trade-representative-advocates-for-smaller-more-balanced-trade-with-china/
+Title:     U.S. Trade Representative Advocates for Smaller, More Balanced Trade with China
+Published: 2025-12-05 03:00:48-07:00
+Category:  trade
+Body:      U.S. Trade Representative Jamieson Greer said on Thursday that U.S. trade with China needs to be balanced and probably needs... Read More The post U.S. Trade Representative Advocates for Smaller, More Balanced Trade with China appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/how-product-bundling-and-kitting-are-reshaping-warehouse-labor-models/
+Title:     How Product Bundling and Kitting Are Reshaping Warehouse Labor Models
+Published: 2025-12-05 02:40:48-07:00
+Category:  ipi
+Body:      Bundling and kitting gain momentum as modern fulfillment demands faster processing and cleaner workflows. Shoppers expect quick delivery and simple... Read More The post How Product Bundling and Kitting Are Reshaping Warehouse Labor Models appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/container-shipping-rates-rise-again-after-three-week-drop/
+Title:     Container Shipping Rates Rise Again After Three-Week Drop
+Published: 2025-12-05 02:20:14-07:00
+Category:  shipping
+Body:      Global container shipping rates rose 7% this week to $1,927 per FEU, marking the first increase in nearly a month... Read More The post Container Shipping Rates Rise Again After Three-Week Drop appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/railway-supply-chain-news-etcs-installation-acquisitions-leadership-updates/
+Title:     Railway Supply Chain News: ETCS Installation, Acquisitions, & Leadership Updates
+Published: 2025-12-05 02:00:37-07:00
+Category:  acquisitions/mergers
+Body:      According to Railway Gazette, CMZO Elektronika has completed the first installation on a locomotive of an ETCS onboard unit produced... Read More The post Railway Supply Chain News: ETCS Installation, Acquisitions, & Leadership Updates appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/the-rising-role-of-digital-trade-corridors-in-global-supply-chains/
+Title:     The Rising Role of Digital Trade Corridors in Global Supply Chains
+Published: 2025-12-04 03:00:20-07:00
+Category:  trade
+Body:      Introduction The global trade ecosystem is undergoing a rapid transformation, driven by digitalization, automation, and cross-border collaboration. Among the most... Read More The post The Rising Role of Digital Trade Corridors in Global Supply Chains appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/iag-cargo-opens-applications-for-2026-graduate-programme/
+Title:     IAG Cargo Opens Applications for 2026 Graduate Programme
+Published: 2025-12-04 02:40:37-07:00
+Category:  shipping
+Body:      The programme was announced in a report by Air Cargo News. IAG Cargo has opened its 2026 graduate programme that... Read More The post IAG Cargo Opens Applications for 2026 Graduate Programme appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/2025-holiday-tipping-guidelines-how-to-be-selective-and-stay-on-budget/
+Title:     2025 Holiday Tipping Guidelines: How to Be Selective and Stay on Budget
+Published: 2025-12-04 02:20:46-07:00
+Category:  shipping
+Body:      The holidays are a season of gratitude, but it’s also a time when budgets feel tighter than ever. According to... Read More The post 2025 Holiday Tipping Guidelines: How to Be Selective and Stay on Budget appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/how-hr-tech-and-ai-are-transforming-global-workforce-operations/
+Title:     How HR Tech and AI Are Transforming Global Workforce Operations
+Published: 2025-12-04 02:00:57-07:00
+Category:  trade
+Body:      Global trade isn’t driven solely by ports, shipping lanes, or inventory software. It runs on people. Every container that moves,... Read More The post How HR Tech and AI Are Transforming Global Workforce Operations appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.globaltrademag.com/stop-leaking-revenue-uncovering-the-internal-friction-that-kills-b2b-deals/
+Title:     Stop Leaking Revenue: Uncovering The Internal Friction That Kills B2B Deals
+Published: 2025-12-03 03:00:36-07:00
+Category:  earnings
+Body:      Revenue doesn’t just vanish because of bad pricing or tough competition; it leaks out in quieter ways. Inside the organization.... Read More The post Stop Leaking Revenue: Uncovering The Internal Friction That Kills B2B Deals appeared first on Global Trade Magazine ....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/business/live-news/stock-market-bank-earnings/index.html
+Title:     Markets digest bank earnings after recent turmoil
+Published: 2023-04-14 14:00:28-06:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2023/04/13/success/tax-filing-tips/index.html
+Title:     Still haven't filed your taxes? Here's what you need to know
+Published: 2023-04-14 14:07:40-06:00
+Category:  earnings
+Body:      So far this tax season, the IRS has received more than 90 million income tax returns for 2022....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2023/04/14/economy/march-retail-sales/index.html
+Title:     Retail spending fell in March as consumers pull back
+Published: 2023-04-14 08:29:52-06:00
+Category:  cpi
+Body:      Spending at US retailers fell in March as consumers pulled back amid recessionary fears fueled by the banking crisis....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2023/04/13/business/silicon-valley-bank-entrepreneurs-of-color-reaj/index.html
+Title:     Silicon Valley Bank collapse renews calls to address disparities impacting entrepreneurs of color
+Published: 2023-04-13 15:13:04-06:00
+Category:  acquisitions/mergers
+Body:      When customers at Silicon Valley Bank rushed to withdraw billions of dollars last month, venture capitalist Arlan Hamilton stepped in to help some of the founders of color who panicked about losing access to payroll funds....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2022/03/21/us/lake-powell-capacity-shrinking-drought-climate/index.html
+Title:     Not only is Lake Powell's water level plummeting because of drought, its total capacity is shrinking, too
+Published: 2022-03-21 13:54:24-06:00
+Category:  acquisitions/mergers
+Body:      Lake Powell, the second-largest human-made reservoir in the US, has lost nearly 7% of its potential storage capacity since 1963, when Glen Canyon Dam was built, a new report shows....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2022/03/22/world/air-pollution-2021-iqair-report-climate/index.html
+Title:     These were the best and worst places for air quality in 2021, new report shows
+Published: 2022-03-22 10:43:47-06:00
+Category:  gnp
+Body:      Air pollution spiked to unhealthy levels around the world in 2021, according to a new report....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2022/03/20/us/solar-power-on-big-box-store-rooftops-climate/index.html
+Title:     Big-box stores could help slash emissions and save millions by putting solar panels on roofs. Why aren't more of them doing it?
+Published: 2022-03-20 01:01:50-06:00
+Category:  cpi
+Body:      As the US attempts to wean itself off its heavy reliance on fossil fuels and shift to cleaner energy sources, many experts are eyeing a promising solution: your neighborhood big-box stores and shopping malls....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/style/article/blackpink-coachella-2023-hanboks-lotw/index.html
+Title:     Look of the Week: Blackpink headline Coachella in Korean hanboks
+Published: 2023-04-18 09:39:40-06:00
+Category:  earnings
+Body:      Bringing the second day of this year's Coachella to a close, K-Pop girl group Blackpink made history Saturday night when they became the first Asian act to ever headline the festival. To a crowd of, reportedly, over 125,000 people, Jennie, Jisoo, Lisa and Rosé used the ground-breaking moment to pay ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/style/article/old-masters-da-vinci-egg-yolk-painting-scn/index.html
+Title:     Scientists identify secret ingredient in Leonardo da Vinci paintings
+Published: 2023-03-30 11:43:18-06:00
+Category:  acquisitions/mergers
+Body:      "Old Masters" such as Leonardo da Vinci, Sandro Botticelli and Rembrandt may have used proteins, especially egg yolk, in their oil paintings, according to a new study....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/style/article/playboy-the-conversation/index.html
+Title:     How Playboy cut ties with Hugh Hefner to create a post-MeToo brand
+Published: 2023-04-11 01:10:28-06:00
+Category:  acquisitions/mergers
+Body:      Hugh Hefner launched Playboy Magazine 70 years ago this year. The first issue included a nude photograph of Marilyn Monroe, which he had purchased and published without her knowledge or consent....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/style/article/fashion-week-fall-winter-2023-size-diversity-skinny-wegovy/index.html
+Title:     'A definitive backslide.' Inside fashion's worrying runway trend
+Published: 2023-04-06 14:53:38-06:00
+Category:  acquisitions/mergers
+Body:      Now that the Fall-Winter 2023 catwalks have been disassembled, it's clear one trend was more pervasive than any collective penchant for ruffles, pleated skirts or tailored coats....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/style/article/michael-jordan-sneakers-1998-finals-sothebys-auction-record/index.html
+Title:     Michael Jordan's 1998 NBA Finals sneakers sell for a record $2.2 million
+Published: 2023-04-11 21:17:57-06:00
+Category:  acquisitions/mergers
+Body:      In 1998, Michael Jordan laced up a pair of his iconic black and red Air Jordan 13s to bring home a Bulls victory during Game 2 of his final NBA championship — and now they are the most expensive sneakers ever to sell at auction.
+
+The game-winning sneakers sold for $2.2 million at Sotheby's in New Yo...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/style/article/francois-prost-gentlemens-club/index.html
+Title:     The surreal facades of America's strip clubs
+Published: 2023-03-06 07:13:40-07:00
+Category:  earnings
+Body:      Some people travel the world in search of adventure, while others seek out natural wonders, cultural landmarks or culinary experiences. But French photographer François Prost was looking for something altogether different during his recent road trip across America: strip clubs....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/travel/article/airplane-mode-reasons-why/index.html
+Title:     Here's the real reason to turn on airplane mode when you fly
+Published: 2023-04-07 06:52:23-06:00
+Category:  acquisitions/mergers
+Body:      We all know the routine by heart: "Please ensure your seats are in the upright position, tray tables stowed, window shades are up, laptops are stored in the overhead bins and electronic devices are set to flight mode."...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/travel/article/hippo-attack-avoid-survive-paul-templer/index.html
+Title:     'I was up to my waist down a hippo's throat.' He survived, and here's his advice
+Published: 2023-04-12 06:44:43-06:00
+Category:  earnings
+Body:      Paul Templer was living his best life....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/travel/article/couple-turned-abandoned-japanese-home-into-guest-house/index.html
+Title:     They bought an abandoned 'ghost house' in the Japanese countryside
+Published: 2023-04-10 06:22:59-06:00
+Category:  acquisitions/mergers
+Body:      He'd spent years backpacking around the world, and Japanese traveler Daisuke Kajiyama was finally ready to return home to pursue his long-held dream of opening up a guesthouse....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/travel/article/mongolia-reasons-to-visit-2023/index.html
+Title:     Relaxed entry rules make it easier than ever to visit this stunning Asian nation
+Published: 2023-03-30 22:25:31-06:00
+Category:  shipping
+Body:      Due to its remoteness and short summer season, Mongolia has long been a destination overlooked by travelers....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/travel/article/china-beautiful-great-wall-sections-cmd/index.html
+Title:     The most beautiful sections of China's Great Wall
+Published: 2023-09-17 20:57:08-06:00
+Category:  acquisitions/mergers
+Body:      Having lived in Beijing for almost 12 years, I've had plenty of time to travel widely in China....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/specials/travel-newsletter
+Title:     Sign up to our newsletter for a weekly roundup of travel news
+Published: 2021-12-10 11:58:28-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/2022/12/11/us/cnn-heroes-all-star-tribute-hero-of-the-year/index.html
+Title:     Nelly Cheboi, who creates computer labs for Kenyan schoolchildren, is CNN's Hero of the Year
+Published: 2022-12-12 03:38:27-07:00
+Category:  earnings
+Body:      Celebrities and musicians are coming together tonight to honor everyday people making the world a better place....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/specials/cnn-heroes-salutes-special
+Title:     CNN Heroes: Sharing the Spotlight
+Published: 2022-12-10 12:39:29-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.cnn.com/videos/tv/2021/11/26/how-to-donate-matching-cnnheroes.cnn
+Title:     Donate now to a Top 10 CNN Hero
+Published: 2021-11-26 14:14:02-07:00
+Category:  earnings
+Body:      Anderson Cooper explains how you can easily donate to any of the 2021 Top 10 CNN Heroes....
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fool.com/the-ascent/credit-cards/landing/wells-fargo-reflect-review/?utm_site=theascent&utm_campaign=ta-cc-co-cnn-welref2-ron-5-hp-sfpb&utm_medium=cpc&utm_source=cnn
+Title:     0% intro APR until 2024 is 100% insane
+Published: 2025-12-06 18:57:33.916908-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fool.com/the-ascent/credit-cards/landing/citi-simplicity-review/?utm_site=theascent&utm_campaign=ta-cc-co-cnn-citisimp2-ron-5-hp-sfpb&utm_medium=cpc&utm_source=cnn
+Title:     It's official: now avoid credit card interest into 2024
+Published: 2025-12-06 18:57:33.916908-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.fool.com/the-ascent/credit-cards/landing/wells-fargo-active-cash-card-review/?utm_site=theascent&utm_campaign=ta-cc-co-cnn-welac2-ron-5-hp-sfpb&utm_medium=cpc&utm_source=cnn
+Title:     Experts: this is the best cash back card of 2022
+Published: 2025-12-06 18:57:33.917905-07:00
+Category:  earnings
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.lendingtree.com/?splitterid=home-equity&cproduct=he&cchannel=content&csource=cnn&cmethod=heform&ccreative=risingequitycash_housemoneystack&placement_name=sectionfronts&ad_headline=risingequitycash&ad_image_name=housemoneystack&ctype=sectionfronts&bdst=revshare&mtaid=AC53E&esourceid=6348616
+Title:     Turn Your Rising Home Equity Into Cash You Can Use
+Published: 2025-12-06 18:57:33.917905-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.lendingtree.com/?splitterid=home-equity&cproduct=he&cchannel=content&csource=cnn&cmethod=heform&ccreative=dreambighomeequity_housemoneystack&placement_name=sectionfronts&ad_headline=dreambighomeequity&ad_image_name=housemoneystack&ctype=sectionfronts&bdst=revshare&mtaid=AC53E&esourceid=6348616
+Title:     Dream Big with a Home Equity Loan
+Published: 2025-12-06 18:57:33.917905-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       https://www.lendingtree.com/?splitterid=home-equity&cproduct=he&cchannel=content&csource=cnn&cmethod=heform&ccreative=cashoutoptions_housemoneystack&placement_name=sectionfronts&ad_headline=cashoutoptions&ad_image_name=housemoneystack&ctype=sectionfronts&bdst=revshare&mtaid=AC53E&esourceid=6348616
+Title:     Want Cash Out of Your Home? Here Are Your Best Options
+Published: 2025-12-06 18:57:33.917905-07:00
+Category:  acquisitions/mergers
+Body:      ...
+--------------------------------------------
+
+Beginning classification...
+Model already loaded. Using cached instance.
+Classification complete
+--------------------------------------------
+URL:       http://money.cnn.com/2018/11/01/retirement/irs-contributions/index.html?section=money_latest
+Title:     Retirement contribution limits will rise in 2019
+Published: 2018-11-01 14:50:22-06:00
+Category:  earnings
+Body:      Good news retirement savers: The Internal Revenue Service announced cost of living increases to the contribution limits for retirement-related plans in 2019....
+--------------------------------------------
+
+
+========== PIPELINE COMPLETE ==========
+
