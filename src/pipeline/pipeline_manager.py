@@ -18,7 +18,6 @@ def run_pipeline(print_results: bool = True):
     print("\n========== PIPELINE START ==========\n")
 
     articles = poll_all_feeds()
-
     saved_count = 0
     skipped_count = 0
 
@@ -28,51 +27,60 @@ def run_pipeline(print_results: bool = True):
         body = art["body"]
         published = art["published"]
 
-        # ---------------------------------------
-        # STEP 1 — MongoDB deduplication check
-        # ---------------------------------------
+        # --------------------------------------------------
+        # STEP 1 — Deduplication
+        # --------------------------------------------------
         if article_exists(url):
             skipped_count += 1
-            print(f"[SKIP] Already ingested: {url}")
+            print(f"[MongoDB] Skiped article: {url}")
+            print("--------------------------------------------\n")
             continue
 
-        # ---------------------------------------
+        # --------------------------------------------------
         # STEP 2 — Classification
-        # ---------------------------------------
+        # --------------------------------------------------
+        print("Beginning classification...")
         pred = classify_text(title, body)
+        print("Classification complete")
 
+        main_topic = pred["main_topic"]
+        topic_score = pred["topic_scores"][0]
+
+        # --------------------------------------------------
+        # STEP 3 — Build DB document
+        # --------------------------------------------------
         article_doc = {
             "url": url,
             "title": title,
             "body": body,
             "published": published,
-            "main_topic": pred["main_topic"],
-            "topic_scores": pred["topic_scores"],
-            "full_topics": pred["topics"],
+            "main_topic": main_topic,
+            "topic_score": topic_score,
         }
 
-        # ---------------------------------------
-        # STEP 3 — Save to MongoDB
-        # ---------------------------------------
+        # --------------------------------------------------
+        # STEP 4 — Save to MongoDB
+        # --------------------------------------------------
         save_article(article_doc)
-        saved_count += 1
 
-        # ---------------------------------------
-        # STEP 4 — Print to console (optional)
-        # ---------------------------------------
+        # --------------------------------------------------
+        # STEP 5 — Pretty print
+        # --------------------------------------------------
         if print_results:
             print("--------------------------------------------")
             print(f"URL:       {url}")
             print(f"Title:     {title}")
-            print(f"Published: {published}")
-            print(f"Category:  {pred['main_topic']}")
             print(f"Body:      {body[:300]}...")
-            print("[MongoDB] Saved.")
+            print(f"Published: {published}")
+            print(f"Category:  {main_topic}")
+            print(f"Category score: {topic_score:.4f}")
             print("--------------------------------------------\n")
 
-    # ---------------------------------------
-    # FINAL SUMMARY
-    # ---------------------------------------
+        saved_count += 1
+
+    # --------------------------------------------------
+    # Summary
+    # --------------------------------------------------
     print("\n========== PIPELINE COMPLETE ==========")
     print(f"Saved new articles:     {saved_count}")
     print(f"Skipped duplicates:     {skipped_count}")

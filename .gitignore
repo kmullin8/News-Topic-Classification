@@ -6,3 +6,4 @@ models/
 *.pt
 *.safetensors
 *.json
+output.txt
