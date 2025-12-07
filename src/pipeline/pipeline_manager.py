@@ -32,7 +32,7 @@ def run_pipeline(print_results: bool = True):
         # --------------------------------------------------
         if article_exists(url):
             skipped_count += 1
-            print(f"[MongoDB] Skiped article: {url}")
+            print(f"[MongoDB] Skiped entry: {url}")
             print("--------------------------------------------\n")
             continue
 

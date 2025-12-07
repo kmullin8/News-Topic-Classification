@@ -71,4 +71,4 @@ def save_article(doc: dict):
     doc["ingested_at"] = datetime.utcnow()
 
     col.insert_one(doc)
-    print(f"[MongoDB] Saved article: {doc.get('url')}")
+    print("[MongoDB] Saved entry")
