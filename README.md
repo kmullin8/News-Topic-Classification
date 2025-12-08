@@ -130,121 +130,76 @@ News-Topic-Classification/
 
 ---
 
-##  Project Roadmap & To-Do Checklist
 
-Each step is small, concrete, and testable.
+## DistilBERT Model(s)
+Goal: Train a **topic-aware DistilBERT**
 
----
-
-### Step 1: Project Setup & Repo Scaffolding
-
-For this step I will:
-
-- [ ] Create the project repo and folder structure:  
-  `data/`, `models/`, `src/`, `notebooks/`, `scripts/`
-- [ ] Install dependencies:  
-  `transformers`, `datasets`, `torch`, `scikit-learn`,  
-  `feedparser`, `newspaper3k`, `pymongo`, `python-dotenv`, `beautifulsoup4`
-- [ ] Add `.env.example` and initial `config.yaml`
-
-**Tips:**
-- Pin versions in `requirements.txt`
-- Keep paths + feed URLs in config files, not code
-
-**test:**
-- [ ] Run `python -m src.sanity_check`
-- [ ] Ensure imports work for all major libraries
-
----
-
-### Step 2: Phase 1 – Fine-Tune DistilBERT on 20 Newsgroups
-
-Goal: Train a **topic-aware DistilBERT** on 20NG.
-
-For this step I will:
-
-- [ ] Create `notebooks/20ng_exploration.ipynb` with dataset exploration
-- [ ] Load 20NG dataset and convert to `datasets.Dataset`
-- [ ] Implement tokenizer: `[TITLE] [SEP] [BODY]` or `text`, `max_length=512`
-- [ ] Fine-tune `distilbert-base-uncased` on 20 labels
-- [ ] Save model + tokenizer → `models/distilbert_20ng/`
-
-**Results:**
-
-**Loss and accuracy per epoch**
-| Epoch | Eval Loss | Accuracy | Macro F1 |
-| ----- | --------- | -------- | -------- |
-| **1** | **1.056** | 0.680    | 0.653    |
-| **2** | **1.038** | 0.702    | 0.686    |
-| **3** | **1.053** | 0.714    | 0.702    |
-
-**Best & Worst Performing Categories**
-| Rank  | Category             | F1-Score                                      |
-| ----- | -------------------- | --------------------------------------------- |
-| **1** | `rec.sport.hockey`   | **0.90**                                      |
-| **2** | `rec.sport.baseball` | **0.86**                                      |
-| **3** | `misc.forsale`       | **0.83** *(tied closely with several others)* |
-
-| Rank          | Category             | F1-Score |
-| ------------- | -------------------- | -------- |
-| **1 (Worst)** | `talk.religion.misc` | **0.31** |
-| **2**         | `alt.atheism`        | **0.49** |
-| **3**         | `talk.politics.misc` | **0.51** |
+I initially fine-tuned a DistilBERT model on the 20 Newsgroups dataset with the intention of using it as the primary classifier for basic news, but later shifted the project toward a more specific economic/ commodities news. The 20NG model ultimately served as a foundational model for training the final Reuters-21578 economic and commodities classifier.
 
 
-**Training performance**
-| Metric                  | Value                            |
-| ----------------------- | -------------------------------- |
-| **Total Training Time** | **(~14.3 hours)** |
-| **Training Throughput** | 0.041 steps/sec                  |
-| **Samples/sec**         | 0.658 samples/sec                |
+### **20NG distilBERT model results:**
 
----
+**Loss and accuracy per epoch:**
+   
+      | Epoch | Eval Loss | Accuracy | Macro F1 |
+      | ----- | --------- | -------- | -------- |
+      | **1** | **1.056** | 0.680    | 0.653    |
+      | **2** | **1.038** | 0.702    | 0.686    |
+      | **3** | **1.053** | 0.714    | 0.702    |
+      
+**Best & Worst Performing Categories:**
+   
+      | Rank  | Category             | F1-Score |
+      | ----- | -------------------- | -------- |
+      | **1** | `rec.sport.hockey`   | **0.90** |
+      | **2** | `rec.sport.baseball` | **0.86** |
+      | **3** | `misc.forsale`       | **0.83** |
+      
+      | Rank          | Category             | F1-Score |
+      | ------------- | -------------------- | -------- |
+      | **1 (Worst)** | `talk.religion.misc` | **0.31** |
+      | **2**         | `alt.atheism`        | **0.49** |
+      | **3**         | `talk.politics.misc` | **0.51** |
+      
+      
+**Training performance:**
+   
+      | Metric                  | Value                            |
+      | ----------------------- | -------------------------------- |
+      | **Total Training Time** | **(~14.3 hours)** |
+      | **Training Throughput** | 0.041 steps/sec                  |
+      | **Samples/sec**         | 0.658 samples/sec                |
 
-### Step 3: Phase 2 – Fine-Tune on Reuters RCV1-v2
 
-Goal: Teach model **real newsroom subject taxonomy**.
-
-For this step I will:
-
-- [ ] Place raw Reuters SGML files in `data/reuters_rcv1/`
-- [ ] Implement preprocessing:
-  - Parse SGML → ID, title, body, topics  
-  - Build label list  
-  - Create multi-label vectors
-- [ ] Load the **20NG-fine-tuned DistilBERT** model
-- [ ] Replace classification head with multi-label (sigmoid)
-- [ ] Fine-tune using `BCEWithLogitsLoss`
-- [ ] Save model → `models/distilbert_20ng_reuters/`
-
--change of plans, becuase I have to apply for the rcv1 dataset I will train on a simular dataset reuters21578 as a place holder untill I have acces to the rcv1 dataset
-
-**Reuters21578 Results:**
+### **Reuters21578 Results:**
 
 **Loss and accuracy per epoch**
-| Epoch     | Eval Loss  | Accuracy   | Macro F1   |
-| --------- | ---------- | ---------- | ---------- |
-| **Final** | **0.5787** | **0.8548** | **0.4621** |
+
+      | Epoch     | Eval Loss  | Accuracy   | Macro F1   |
+      | --------- | ---------- | ---------- | ---------- |
+      | **Final** | **0.5787** | **0.8548** | **0.4621** |
 
 **Best & Worst Performing Categories**
-| Rank  | Category  | F1-Score  |
-| ----- | --------- | --------- |
-| **1** | `housing` | **1.000** |
-| **2** | `sugar`   | **0.957** |
-| **3** | `earn`    | **0.951** |
 
-| Rank          | Category | F1-Score  |
-| ------------- | -------- | --------- |
-| **1 (Worst)** | `wpi`    | **0.000** |
-| **2**         | `yen`    | **0.000** |
-| **3**         | `zinc`   | **0.000** |
+      | Rank  | Category  | F1-Score  |
+      | ----- | --------- | --------- |
+      | **1** | `housing` | **1.000** |
+      | **2** | `sugar`   | **0.957** |
+      | **3** | `earn`    | **0.951** |
+
+      | Rank          | Category | F1-Score  |
+      | ------------- | -------- | --------- |
+      | **1 (Worst)** | `wpi`    | **0.000** |
+      | **2**         | `yen`    | **0.000** |
+      | **3**         | `zinc`   | **0.000** |
 
 **Training performance**
-| Metric                  | Value                                 |
-| ----------------------- | ------------------------------------- |
-| **Total Training Time** | ~40 seconds per epoch *(≈120s total)* |
-| **Training Throughput** | ~32 steps/sec                         |
-| **Samples/sec**         | ~510 samples/sec                      |
+
+      | Metric                  | Value                                 |
+      | ----------------------- | ------------------------------------- |
+      | **Total Training Time** | ~40 seconds per epoch *(≈120s total)* |
+      | **Training Throughput** | ~32 steps/sec                         |
+      | **Samples/sec**         | ~510 samples/sec                      |
 
 
 ---
