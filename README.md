@@ -1,4 +1,4 @@
-# Full-Article Topic Classification + Live News Scraper
+# Macro-Financial News Classification Pipeline
 
 A machine learning pipeline that parses rss feeds for economic, commodities, and macro-financial news, predicts their main subject using a  DistilBERT fine-tuning strategy (trained on reuters 21578 data set), and stores live-scraped article information plus topic predictions in MongoDB. 
 
