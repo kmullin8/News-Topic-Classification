@@ -295,88 +295,43 @@ Extend classifier with open-label or unsupervised discovery using to lable on no
 ---
 
 
-## Project requirments:
+# Project Requirements Completion Summary
 
-### 1. Core Project Requirements
-- Must involve **deep learning** as the primary technical challenge.
-- Must include **reads and writes to data** (database, ingestion pipeline, API storage, etc.).
-- Must require **30–40 hours of effort**.
-  - Max **5 hrs** research/reading.
-  - Max **10 hrs** prep (data cleaning, setup).
-  - At least **20 hrs** designing, building, debugging, testing deep learning models (not counting training time).
-- Must be personally interesting, meaningful, resume-worthy.
-  
-### 2. Initial Deliverables (GitHub Markdown File)
-- **Project purpose + goals** (1–3 sentences, with optional pictures).
-- **ERD sketch** (entities + relationships).
-- **System design sketch** (components + arrows showing interactions).
-- **Daily goals/milestones** until end of class.
-- **Optional UX sketches**.
-- Must be submitted as a **public GitHub repo markdown link**.
-
-### 3. Final Deliverables
-#### A. GitHub Repo
-- Initial pitch  
-- Initial design  
-- Progress log (hour-by-hour time entries)  
-- Code  
-- Diagrams  
-- Demo (video/gif/images)  
-- Final markdown report  
-
-#### B. Class Requirements
-- In-class **pitch**.
-- Give **feedback** to others.
-- **Final presentation** (3–10 minutes) including:
-  - System demo or prototype  
-  - Why it interests you  
-  - Summary (1–3 sentences)  
-  - Key learnings (≥3)  
-  - Architecture + scaling diagram  
-  - Notes on failover/performance/auth/concurrency if applicable  
-  - Invite questions  
-
-#### C. Class Channel Post
-- Few sentences describing project  
-- Why it interests you  
-- Repo link  
-- Demo gif/video  
-- State **“yes, share”** or **“no, don’t share”**
-
-#### D. Final PDF Writeup (≤3 pages)
-**1–2 pages:**
-- Problem description  
-- Dataset description + EDA  
-- Technical approach  
-- Model architecture + training details  
-- Train/test split  
-- Metrics + results  
-- Overfitting analysis  
-- Iterations & improvements  
-- Whether the project succeeded or made progress  
-
-**1 page:**
-- **Time log** with daily entries
-
-### 4. Grading
-- **20%** = number of hours (hours / 30)  
-- **5%** = report quality  
-- Project is graded on **effort**, not success.
-
-### 5. Required Questions to Answer in Report
-- Where did the data come from? Who cares about it?
-- What type of problem is it (classification/regression/etc.)?
-- Supervised or unsupervised?
-- What prior work exists?
-- What did your EDA reveal?
-- What model did you use and why?
-- Parameters, optimizer, pretrained weights, topology decisions.
-- How data was split (train/test).
-- Final performance metrics.
-- Evidence of overfitting or generalization.
-- What changed during iterative development?
-- Did you solve the problem or make measurable progress?
+## Summary  
+A full-article topic classification system that ingests live RSS financial news, cleans the text, classifies articles using a DistilBERT model fine‑tuned on Reuters‑21578, and stores structured results in MongoDB. Designed as a real‑time economic and commodities news intelligence pipeline.
 
 
+## Project Overview  
+- **Model:** DistilBERT fine‑tuned on Reuters‑21578 economic + commodity labels.  
+- **Pipeline:** RSS fetch → HTML clean → topic prediction → MongoDB insert.  
+- **Output:** Topic, probability, timestamp, article text, and metadata.
 
+## What I Learned  
+- How to fine‑tune a transformer model on a domain‑specific dataset.  
+- How to build a production‑style ingestion pipeline with deduplication and storage (RSS etc.).  
+- How to integrate model inference into a real‑time system.
+
+## AI Integration  
+- The classifier uses a custom fine‑tuned DistilBERT model for topic prediction.  
+- AI improves news classification by merging title + body with contextual weighting.  
+
+## How AI Helped Build the Project  
+- Helped debug tokenizer/model loading issues.  
+- Assisted in designing pipeline structure and config conventions.  
+- Help document code and format print statments and structure.
+
+## Why This Project Interests Me  
+I’m interested in financial markets, macroeconomics, and real‑time information systems. This project combines NLP, data engineering, and news analytics into one tool that could extend into full market intelligence applications.
+
+## Key Learnings  
+1. Building ML systems requires as much engineering as modeling.  
+2. Clean ingestion and deduping are critical for real data.  
+3. Transformers perform best with careful preprocessing + thoughtful architecture.
+
+## Scaling / Failover / Performance  
+- URL‑based deduplication prevents repeat processing.  
+- MongoDB handles scaling for many article writes.  
+- Cached model + auto device selection keeps inference fast.  
+- Pipeline easily extends to more feeds via config.
+- Bottle neck at inference time as local cpu is slow (5+ minuets for 230 entries)
 
