@@ -1,6 +1,6 @@
 # Full-Article Topic Classification + Live News Scraper
 
-A machine learning pipeline that reads full news articles, predicts their main subject using a two-phase DistilBERT fine-tuning strategy (20 Newsgroups → Reuters RCV1-v2), and stores live-scraped articles plus topic predictions in MongoDB. The system supports both single-URL classification and scheduled RSS scraping with an easy on/off switch.
+A machine learning pipeline that parses rss feeds for economic, commodities, and macro-financial news, predicts their main subject using a  DistilBERT fine-tuning strategy (trained on reuters 21578 data set), and stores live-scraped article information plus topic predictions in MongoDB. 
 
 ---
 
@@ -9,14 +9,12 @@ A machine learning pipeline that reads full news articles, predicts their main s
 This project has two big parts:
 
 1. **Model pipeline**  
-   - Phase 1: Fine-tune **DistilBERT-base-uncased** on **20 Newsgroups** to learn general topic structure.  
-   - Phase 2: Fine-tune that model on **Reuters RCV1-v2** to learn detailed news subjects (economics, military, energy, etc.).
+   - Phase 1: Fine-tune **DistilBERT-base-uncased** on **reuters 21578 data set** to learn topic structure.  
 
 2. **Live news scraping + classification system**  
-   - **Manual mode**: Take a single news URL, scrape it, classify, and store the result.  
-   - **Auto mode**: Poll RSS feeds on a schedule, classify all new articles, and store everything in MongoDB.
+   - Poll RSS feeds on a schedule, classify all new articles, and store everything in MongoDB.
 
-The final system becomes a foundation for a real-time **news topic intelligence** engine, with optional future upgrade to long-context models (e.g., Longformer) or extend classifier with open-label or unsupervised discovery.
+The final system serves as a foundation for a real-time economic and commodities news intelligence engine, specializing in macro-financial topics such as energy markets, metals, agriculture, currency movements, and key economic indicators. Future extensions may include long-context transformers (e.g., Longformer) or adaptive topic discovery for emerging market events.
 
 ---
 
@@ -24,54 +22,23 @@ The final system becomes a foundation for a real-time **news topic intelligence*
 
 ### High-level data flow
 
-- **Training time**  
-  20NG → DistilBERT → Reuters → Final topic-classification model
-
-- **Inference time (manual mode)**  
-  URL → HTML → Clean text → Model → Predicted topics → MongoDB
-
-- **Inference time (auto mode)**  
-  RSS feeds → URLs → HTML → Clean text → Model → Predicted topics → MongoDB (scheduled)
-
-### Manual Mode, user provided url
-
-```mermaid
-sequenceDiagram
-    actor User
-    participant PipelineManager
-    participant Scraper
-    participant Model
-    participant MongoDB
-
-    User->>PipelineManager: Provide article URL
-    PipelineManager->>Scraper: Fetch + extract article
-    Scraper-->>PipelineManager: Title + body text
-    PipelineManager->>Model: [TITLE] [SEP] [BODY]
-    Model-->>PipelineManager: topics + scores
-    PipelineManager->>MongoDB: Insert article + predictions
-    MongoDB-->>PipelineManager: Confirm insert
-```
-
-### Auto Mode, rss powered 
+- **Inference (auto rss)**  
+  RSS feeds → Clean text → Model → Predicted topics → MongoDB (scheduled)
 
 ```mermaid
 sequenceDiagram
     participant PipelineManager
     participant RSS
-    participant Scraper
     participant Model
     participant MongoDB
 
     PipelineManager->>RSS: Poll feeds (auto mode)
-    RSS-->>PipelineManager: Items (URLs, titles)
+    RSS-->>PipelineManager: Items (URLs, titles, bodies, time stamp)
 
     PipelineManager->>MongoDB: Check duplicates
     MongoDB-->>PipelineManager: Exists? yes/no
 
-    PipelineManager->>Scraper: Fetch + extract new articles
-    Scraper-->>PipelineManager: Title + body text
-
-    PipelineManager->>Model: [TITLE] [SEP] [BODY]
+    PipelineManager->>Model: [TITLE] [BODY]
     Model-->>PipelineManager: topics + scores
 
     PipelineManager->>MongoDB: Insert article + predictions
@@ -85,11 +52,11 @@ sequenceDiagram
   "_id": "ObjectId",
   "url": "string",
   "title": "string",
-  "text": "string",
-  "topics": ["string"],
-  "topic_scores": ["float"],
+  "body": "string",
+  "published": "datetime",
   "main_topic": "string",
-  "published_at": "datetime"
+  "topic_score": ["float"],
+  "ingested_at": "datetime"
 }
 ```
 
@@ -97,64 +64,46 @@ sequenceDiagram
 
 ```
 News-Topic-Classification/
-├── config.yaml                 # Global config (paths, model dirs, RSS sources, scraper settings)
+├── config.yaml                 # Global config (RSS feeds, model paths, scraping rules)
 ├── requirements.txt            # Reproducible environment dependencies
-├── .gitignore                  # Ignore rules for models, data, notebooks, etc.
-├── LICENSE                     # Project license
-├── README.md                   # Project overview and usage instructions
-├── sanity_check.py             # Ensures imports, configs, and environment are working
-├── TimeLog.md                  # Work/time tracking for project documentation
+├── .env                        # MongoDB credentials and runtime environment variables
+├── TimeLog.md                  # Work/time tracking for project deliverables
 │
-├── models/                     # All model checkpoints
-│   ├── bert_20ng/              # DistilBERT fine-tuned on 20 Newsgroups
-│   │   ├── config.json
-│   │   ├── model.safetensors
-│   │   ├── special_tokens_map.json
-│   │   ├── tokenizer_config.json
-│   │   ├── tokenizer.json
-│   │   └── vocab.txt
-│   │
-│   └── bert_reuters21578/      # Trained model for Reuters-21578 dataset
-│       ├── bert_reuters21578.zip
-│       ├── config.json
-│       ├── model.safetensors
-│       ├── special_tokens_map.json
-│       ├── tokenizer_config.json
-│       ├── tokenizer.json
-│       └── vocab.txt
+├── models/
+│   └── bert_reuters21578/      # DistilBERT fine-tuned on economic & commodity topics
 │
-├── scripts/                    # Convenience shell scripts for automation
-│   ├── ingest_rss.sh           # Runs RSS polling → database insertion
-│   └── run_train_20ng.sh       # Fine-tune DistilBERT on 20NG
+├── scripts/                    # Developer utility scripts
+│   ├── classify_article_text.py   # CLI tool: classify a title + body into economic labels
+│   └── rss_test.py               # Tests RSS ingestion and feed health
 │
-└── src/                        # Core project source code
-    ├── data/                   # Dataset loaders and preprocessing
-    │   └── loader_20ng.py      # Loads + converts 20NG into HuggingFace DatasetDict
-    │
-    ├── db/                     # Database layer (MongoDB)
+└── src/                         # Core application modules
+    ├── db/
     │   ├── __init__.py
-    │   └── mongo_client.py     # Creates MongoDB client connection using config/env
+    │   └── mongo_client.py      # MongoDB connection (stores articles + topic predictions)
     │
-    ├── inference/              # Model inference pipeline
+    ├── inference/
     │   ├── __init__.py
-    │   └── inference.py        # Loads model + classifies text/articles
+    │   └── inference.py         # Loads model + runs topic prediction on text/articles
     │
-    ├── scraping/               # Web scraping and RSS ingestion
+    ├── pipeline/
     │   ├── __init__.py
-    │   ├── clean_text.py       # HTML cleaning, normalization, token stripping
-    │   ├── rss_poll.py         # Polls RSS feeds → extracts links
-    │   └── scrape_url.py       # Extracts article title + body from a URL
+    │   └── pipeline_manager.py  # Orchestrates RSS ingest → clean text → inference → DB write
     │
-    ├── training/               # Training workflows and notebooks
+    ├── scraping/
     │   ├── __init__.py
-    │   ├── train_20ng.py       # Full fine-tuning pipeline for 20NG
-    │   └── train_reuters21578.ipynb   # Jupyter notebook for training on Reuters-21578 
+    │   ├── clean_text.py        # Text extraction, HTML stripping, noise removal
+    │   └── rss_poll.py          # Polls financial RSS feeds and extracts new article entries
     │
-    ├── utils/                  # Shared helper modules
+    ├── training/
     │   ├── __init__.py
-    │   └── config_loader.py    # Loads config.yaml and resolves paths
+    │   └── train_reuters21578.ipynb   # Training notebook for your custom 49-label classifier
     │
-    └── __init__.py             # Allows the entire src/ folder to be imported as a package
+    ├── utils/
+    │   ├── __init__.py
+    │   └── config_loader.py     # Loads config.yaml and resolves project paths
+    │
+    └── __init__.py              # Marks src/ as an importable package
+
 
 ```
 
@@ -167,8 +116,6 @@ News-Topic-Classification/
 - **feedparser** (RSS)
 - **newspaper3k / BeautifulSoup** (HTML extraction)
 - **MongoDB / Atlas**
-- **Cron / Docker** (scheduling)
-- **Optional:** Celery + Redis (task queues), Longformer (long-context upgrade)
 
 ---
 
@@ -177,10 +124,9 @@ News-Topic-Classification/
 - Transformer fine-tuning (**DistilBERT**)
 - Multi-label topic classification (**Reuters codes**)
 - News subject taxonomy (monetary policy, energy, defense, etc.)
-- HTML extraction and cleaning
-- RSS-based news ingestion
+- RSS Ingestion of Market-Moving Sources
 - NoSQL document storage (**MongoDB**)
-- Production ML inference flow (manual + scheduled modes)
+- Production-Ready Inference Pipeline
 
 ---
 
