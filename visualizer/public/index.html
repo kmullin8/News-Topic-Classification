@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Macro-Financial News Visualizer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f7;
+      color: #111827;
+    }
+
+    header {
+      padding: 16px 24px;
+      background: #111827;
+      color: #f9fafb;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 16px auto 40px;
+      padding: 0 16px;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 16px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(15, 23, 42, 0.08);
+      margin-bottom: 16px;
+      align-items: center;
+    }
+
+    .filters label {
+      font-size: 0.85rem;
+      color: #4b5563;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .filters select,
+    .filters input[type="date"] {
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      font-size: 0.85rem;
+    }
+
+    .filters input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    .filters .checkbox-group {
+      display: flex;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .article-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 12px 14px;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.08s ease, box-shadow 0.08s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(15, 23, 42, 0.12);
+    }
+
+    .article-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #111827;
+    }
+
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-bottom: 6px;
+    }
+
+    .pill {
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-weight: 500;
+    }
+
+    .score-pill {
+      background: #ecfdf3;
+      color: #15803d;
+    }
+
+    .date-pill {
+      background: #f3f4f6;
+      color: #4b5563;
+    }
+
+    .snippet {
+      font-size: 0.8rem;
+      color: #4b5563;
+      margin-top: 4px;
+    }
+
+    .load-more-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .load-more {
+      padding: 8px 18px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: #111827;
+      color: #f9fafb;
+      box-shadow: 0 1px 3px rgba(15,23,42,0.2);
+    }
+
+    .load-more:disabled {
+      opacity: 0.5;
+      cursor: default;
+      box-shadow: none;
+    }
+
+    .status-bar {
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Real-Time Macro-Financial News Visualizer</h1>
+  </header>
+
+  <div class="container">
+    <div class="filters">
+      <label>
+        Topic
+        <select id="topicFilter">
+          <option value="ALL">All topics</option>
+        </select>
+      </label>
+
+      <label>
+        Start date
+        <input type="date" id="startDateFilter" />
+      </label>
+
+      <label>
+        End date
+        <input type="date" id="endDateFilter" />
+      </label>
+
+      <label class="checkbox-group">
+        <input type="checkbox" id="highConfidenceFilter" />
+        High confidence only (≥ 0.8)
+      </label>
+    </div>
+
+    <div class="status-bar" id="statusBar">
+      Loading articles...
+    </div>
+
+    <div class="articles" id="articlesContainer"></div>
+
+    <div class="load-more-wrap">
+      <button class="load-more" id="loadMoreBtn">Load more</button>
+    </div>
+  </div>
+
+  <script>
+    const API_BASE = ''; // same origin
+
+    const topicSelect = document.getElementById('topicFilter');
+    const startDateInput = document.getElementById('startDateFilter');
+    const endDateInput = document.getElementById('endDateFilter');
+    const highConfidenceCheckbox = document.getElementById('highConfidenceFilter');
+    const articlesContainer = document.getElementById('articlesContainer');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const statusBar = document.getElementById('statusBar');
+
+    let skip = 0;
+    const limit = 25;
+    let total = 0;
+    let loading = false;
+
+    async function fetchTopics() {
+      try {
+        const res = await fetch(`${API_BASE}/api/topics`);
+        const topics = await res.json();
+        topics.forEach(t => {
+          if (!t) return;
+          const opt = document.createElement('option');
+          opt.value = t;
+          opt.textContent = t;
+          topicSelect.appendChild(opt);
+        });
+      } catch (err) {
+        console.error('Failed to load topics', err);
+      }
+    }
+
+    function buildQuery(resetSkip = false) {
+      if (resetSkip) skip = 0;
+      const params = new URLSearchParams();
+      params.set('skip', skip);
+      params.set('limit', limit);
+
+      const topic = topicSelect.value;
+      if (topic && topic !== 'ALL') {
+        params.set('topic', topic);
+      }
+
+      const startDate = startDateInput.value;
+      const endDate = endDateInput.value;
+      if (startDate) params.set('startDate', startDate);
+      if (endDate) params.set('endDate', endDate);
+
+      if (highConfidenceCheckbox.checked) {
+        params.set('highConfidence', 'true');
+      }
+
+      return params.toString();
+    }
+
+    function renderArticles(items, append = false) {
+      if (!append) {
+        articlesContainer.innerHTML = '';
+      }
+
+      if (items.length === 0 && !append) {
+        statusBar.textContent = 'No articles found for current filters.';
+        return;
+      }
+
+      items.forEach(item => {
+        const card = document.createElement('div');
+        card.className = 'article-card';
+
+        card.addEventListener('click', () => {
+          if (item.url) {
+            window.open(item.url, '_blank');
+          }
+        });
+
+        const titleEl = document.createElement('div');
+        titleEl.className = 'article-title';
+        titleEl.textContent = item.title || '(No title)';
+
+        const metaRow = document.createElement('div');
+        metaRow.className = 'meta-row';
+
+        if (item.main_topic) {
+          const topicEl = document.createElement('span');
+          topicEl.className = 'pill';
+          topicEl.textContent = item.main_topic;
+          metaRow.appendChild(topicEl);
+        }
+
+        if (typeof item.topic_score === 'number') {
+          const scoreEl = document.createElement('span');
+          scoreEl.className = 'pill score-pill';
+          scoreEl.textContent = `Score: ${item.topic_score.toFixed(3)}`;
+          metaRow.appendChild(scoreEl);
+        }
+
+        if (item.published) {
+          const dateEl = document.createElement('span');
+          dateEl.className = 'pill date-pill';
+          const d = new Date(item.published);
+          dateEl.textContent = d.toLocaleDateString();
+          metaRow.appendChild(dateEl);
+        }
+
+        const snippetEl = document.createElement('div');
+        snippetEl.className = 'snippet';
+        const body = item.body || '';
+        snippetEl.textContent = body.length > 220 ? body.slice(0, 220) + '…' : body;
+
+        card.appendChild(titleEl);
+        card.appendChild(metaRow);
+        card.appendChild(snippetEl);
+
+        articlesContainer.appendChild(card);
+      });
+    }
+
+    async function loadArticles({ reset = false } = {}) {
+      if (loading) return;
+      loading = true;
+      loadMoreBtn.disabled = true;
+      statusBar.textContent = 'Loading...';
+
+      if (reset) {
+        skip = 0;
+        articlesContainer.innerHTML = '';
+      }
+
+      try {
+        const query = buildQuery(false);
+        const res = await fetch(`${API_BASE}/api/articles?${query}`);
+        const data = await res.json();
+
+        total = data.total;
+        const items = data.items || [];
+
+        if (reset) {
+          renderArticles(items, false);
+        } else {
+          renderArticles(items, true);
+        }
+
+        skip += items.length;
+
+        statusBar.textContent = `Showing ${skip} of ${total} articles`;
+
+        if (skip >= total) {
+          loadMoreBtn.disabled = true;
+          loadMoreBtn.textContent = 'No more articles';
+        } else {
+          loadMoreBtn.disabled = false;
+          loadMoreBtn.textContent = 'Load more';
+        }
+      } catch (err) {
+        console.error('Failed to load articles', err);
+        statusBar.textContent = 'Error loading articles.';
+      } finally {
+        loading = false;
+      }
+    }
+
+    // Event listeners
+    loadMoreBtn.addEventListener('click', () => {
+      loadArticles({ reset: false });
+    });
+
+    topicSelect.addEventListener('change', () => loadArticles({ reset: true }));
+    startDateInput.addEventListener('change', () => loadArticles({ reset: true }));
+    endDateInput.addEventListener('change', () => loadArticles({ reset: true }));
+    highConfidenceCheckbox.addEventListener('change', () => loadArticles({ reset: true }));
+
+    // Init
+    (async function init() {
+      await fetchTopics();
+      await loadArticles({ reset: true });
+    })();
+  </script>
+</body>
+</html>

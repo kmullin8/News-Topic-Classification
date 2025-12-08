@@ -8,3 +8,4 @@ models/
 *.json
 output.txt
 venv/
+node_modules/
