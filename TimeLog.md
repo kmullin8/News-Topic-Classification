@@ -42,3 +42,6 @@
 
 12/6: 3hr, 30min
   - 3:30 - 7, implementing rss poll and db
+
+12/8: 1hr, 30min
+  -11:30 - 1, finishing and filling out readme as well as creating final project pdf detailing requirments
