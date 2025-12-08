@@ -204,114 +204,85 @@ I initially fine-tuned a DistilBERT model on the 20 Newsgroups dataset with the 
 
 ---
 
-### Step 4: Inference Module – Unified Article Classifier
+# RSS Ingestion, Filtering, and Classification Pipeline
 
-Goal: One function that classifies article text.
+The project includes a production-ready RSS ingestion system that polls multiple financial and commodity-focused news feeds, cleans and filters entries, classifies them using the Reuters-trained DistilBERT model, and stores structured results in MongoDB. The full pipeline is orchestrated by `pipeline_manager.py`.
 
-For this step I will:
+## 1. Fetching RSS Feeds
+Using `feedparser`, the system loads all sources defined in `config.yaml`.
+Each feed is parsed entry-by-entry, with the following extracted:
 
-- [ ] Create `src/model_inference.py`:
-  - `load_model()`
-  - `classify_text(title, body)`:
-    - Concatenate `[TITLE] [SEP] [BODY]`
-    - Tokenize (512 tokens)
-    - Run model
-    - Return `topics`, `topic_scores`, `main_topic`
-- [ ] Add CLI tool → `scripts/classify_article_text.py`
+- Title
+- Description / HTML body
+- URL
+- Published timestamp (normalized to America/Denver)
+- Source name
 
-**Tips:**
-- Store label mapping in JSON/config  
-- Use probability threshold ~0.3
+## 2. HTML Cleaning and Text Normalization
+Each RSS description is cleaned via:
 
-**test:**
-- [ ] Run classifier on synthetic examples  
-- [ ] Output schema matches Mongo schema
+- BeautifulSoup stripping of HTML tags
+- Removal of boilerplate (“newsletter”, “subscribe”)
+- Suppression of malformed HTML warnings
+- Normalized plain text output
 
----
+## 3. Filtering Unwanted or Irrelevant Items
+The unified filter (`should_filter_entry`) removes:
 
-### Step 5: Manual Mode – Classify a Single Article by URL
+- Non-economic content (sports, lifestyle, opinion pieces)
+- Marketing items
+- Low-signal or boilerplate content
+- Short/non-informative descriptions
 
-Goal: Input a URL → get topics.
+## 4. Deduplication with MongoDB
+Each article URL is checked with `article_exists(url)`.
 
-For this step I will:
+- Already processed → skipped
+- New items → classification
 
-- [ ] Implement `src/scraping/fetch_article.py`:
-  - `fetch_article(url)` using `newspaper3k`
-- [ ] Implement `src/pipeline/manual_classifier.py`:
-  - `classify_from_url(url)`
-- [ ] Add CLI tool: `scripts/classify_url.py URL`
+## 5. Topic Classification
+New articles are classified by DistilBERT into 49 macro‑financial and commodity labels. The highest probability label becomes the article’s `main_topic`.
 
-**Tips:**
-- Skip articles with <100 tokens  
-- Log HTML errors cleanly
+| **Macroeconomic Indicators** | **Currency & Financial Markets** | **Energy & Petrochemicals** | **Metals & Minerals** | **Agriculture & Livestock** |
+| ---------------------------- | -------------------------------- | --------------------------- | --------------------- | --------------------------- |
+| cpi                          | US-dollar                        | crude-oil                   | gold                  | grain                       |
+| gnp                          | earnings                         | nat-gas                     | silver                | wheat                       |
+| income                       | acquisitions/mergers             | gas                         | copper                | oilseed                     |
+| interest                     | trade                            | fuel                        | aluminum              | veg-oil                     |
+| ipi                          | reserves                         | heat                        | zinc                  | cocoa                       |
+| jobs                         | retail                           | Petrochemicals              | tin                   | coffee                      |
+| lei                          | shipping                         |                             | lead                  | cotton                      |
+| money-foreign                |                                  |                             | iron-steel            | orange                      |
+| money-supply                 |                                  |                             | strategic-metal       | sugar                       |
+| balance-of-payments          |                                  |                             |                       | meat                        |
+| wpi                          |                                  |                             |                       | hog                         |
+| housing                      |                                  |                             |                       | livestock                   |
+|                              |                                  |                             |                       | meal-feed                   |
+|                              |                                  |                             |                       | lumber                      |
+|                              |                                  |                             |                       | rubber                      |
 
-**How to test:**
-- [ ] `python scripts/classify_url.py <real_news_url>`  
-- [ ] Manually confirm predicted topic makes sense
 
----
+## 6. Database Storage
+Stored fields:
 
-### Step 6: MongoDB Integration – Storing Articles & Predictions
+- URL
+- Title
+- Cleaned body
+- Timestamp
+- Main topic
+- Topic confidence score
 
-Goal: Store articles + predictions.
-
-For this step I will:
-
-- [ ] Build `src/db/mongo_client.py` for DB connection
-- [ ] Use schema:
-  - `_id`, `url`, `title`, `text`,  
-    `topics`, `topic_scores`, `main_topic`,  
-    `published_at`
-- [ ] Add indexes:
-  - unique index on `url`
-  - index on `published_at`
-  - index on `topics`
-- [ ] Implement `save_article_record(article_dict)`
-
-**Tips:**
-- Use `update_one(..., upsert=True)` for dedup  
-- Keep `topic_scores` as simple dicts
-
-**test:**
-- [ ] Classify a URL and insert  
-- [ ] Check MongoDB UI for document  
-- [ ] Try duplicate URL → ensure it’s rejected or updated
-
----
-
-### Step 7: Auto Mode – RSS Scraper & Classifier Loop
-
-Goal: Automated ingest + classify.
-
-For this step I will:
-
-- [ ] Add `feeds` + `poll_interval_minutes` to config
-- [ ] Implement `src/scraping/rss_scraper.py`:
-  - `poll_feeds()` using `feedparser`
-- [ ] Implement `src/pipeline/auto_classifier.py`:
-  - For each RSS item:
-    - Skip duplicates  
-    - Fetch article  
-    - Clean text  
-    - Classify  
-    - Store
-
-**Tips:**
-- Start with BBC only  
-- Limit to 5–10 articles/run when testing
-
-**test:**
-- [ ] Run module manually  
-- [ ] Confirm new documents appear in Mongo  
-- [ ] Re-run → duplicates skipped
+## 7. Summary Reporting
+The pipeline outputs counts of:
+- Saved articles
+- Duplicate skips
+- Optional detailed classification logs
 
 ---
 
 ## Optional Future Upgrade
 
 Extend classifier with open-label or unsupervised discovery using to lable on novel catagories
-
-- Zero-Shot Classification – Predict user-defined labels without retraining using facebook/bart-large-mnli
 
 - Embedding + Clustering – Group unlabeled articles by similarity using BERT embeddings + KMeans or UMAP
 
@@ -323,18 +294,6 @@ Extend classifier with open-label or unsupervised discovery using to lable on no
 
 ---
 
-## Final System Vision
-
-When all steps are complete, I’ll have:
-
-- A **two-phase fine-tuned DistilBERT model** (20NG → Reuters) that understands full-article news topics  
-- A **reusable inference module** that takes `[TITLE] [SEP] [BODY]` and outputs subject labels  
-- A **manual URL classification tool** for ad-hoc analysis  
-- An **automatic RSS scraper** that continuously ingests and classifies live news  
-- A **MongoDB collection** of rich article records with topics and scores  
-- A system ready for future upgrades to **long-context models** and **analytics dashboards**
-
----
 
 ## Project requirments:
 
